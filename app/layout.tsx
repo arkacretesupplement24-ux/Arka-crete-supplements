@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Zen_Dots } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Providers from "@/app/providers/providers";
 import SplashScreen from "@/components/layout/SplashScreen";
+import FloatingBrochure from "@/components/layout/FloatingBrochure";
+import FloatingWhatsApp from "@/components/layout/FloatingWhatsApp";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,6 +15,12 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const zenDots = Zen_Dots({
+  weight: "400",
+  variable: "--font-zen-dots",
   subsets: ["latin"],
 });
 
@@ -29,7 +37,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${zenDots.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-white">
         <Providers>
@@ -37,6 +45,8 @@ export default function RootLayout({
           <Header />
           <div className="flex-1 flex flex-col">{children}</div>
           <Footer />
+          <FloatingBrochure />
+          <FloatingWhatsApp />
         </Providers>
       </body>
     </html>

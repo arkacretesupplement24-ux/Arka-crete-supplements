@@ -103,7 +103,11 @@ async function main() {
       isFeatured: 1,
       isActive: 1,
       seoTitle: "Tile Grip Classic - Standard Tile Adhesive | ARKA CRETE",
-      seoDescription: "Buy Tile Grip Classic polymer-modified tile adhesive for fixing ceramic tiles on walls and floors. Excellent bond and slip resistance."
+      seoDescription: "Buy Tile Grip Classic polymer-modified tile adhesive for fixing ceramic tiles on walls and floors. Excellent bond and slip resistance.",
+      imageUrl: "https://res.cloudinary.com/dmohmgbut/image/upload/v1782198120/1._Tile_Grip_Classic_ltlxcf.png",
+      galleryImagesJson: "[]",
+      price: "Contact for Quote",
+      sortOrder: 1
     },
     {
       id: "prod-tg-premium",
@@ -136,7 +140,85 @@ async function main() {
       isFeatured: 1,
       isActive: 1,
       seoTitle: "Tile Grip Premium - Heavy Duty Vitrified Tile Adhesive",
-      seoDescription: "Get Tile Grip Premium high-polymer adhesive for granite, marble, and large vitrified tiles. Perfect for interior and exterior installations."
+      seoDescription: "Get Tile Grip Premium high-polymer adhesive for granite, marble, and large vitrified tiles. Perfect for interior and exterior installations.",
+      imageUrl: "https://res.cloudinary.com/dmohmgbut/image/upload/v1782198109/2._Tile_Grip_Premium_xetb2j.png",
+      galleryImagesJson: "[]",
+      price: "Contact for Quote",
+      sortOrder: 2
+    },
+    {
+      id: "prod-tg-premium-plus",
+      categoryId: "cat-tile",
+      name: "Tile Grip Premium Plus",
+      slug: "tile-grip-premium-plus",
+      shortDescription: "Premium flexible polymer modified tile adhesive for heavy tiles and large stones.",
+      longDescription: "Tile Grip Premium Plus is an ultra-premium, high-strength, flexible polymer-modified tile adhesive designed for large format vitrified tiles, marble, granite, and natural stones on both interior and exterior wall and floor installations.",
+      packaging: "20 Kg bag",
+      coverage: "Approx. 40-50 sq. ft. per 20 kg bag at 3-4mm thickness.",
+      applicationType: "Vitrified & Natural Stone Fixing (Interior & Exterior Walls & Floors)",
+      productType: "Extra-performance polymer-modified cementitious powder",
+      featuresJson: JSON.stringify([
+        "High flexibility and shear bond strength",
+        "Resistant to water and weather conditions",
+        "Excellent grab and non-slip on walls",
+        "Extended open time"
+      ]),
+      benefitsJson: JSON.stringify([
+        "Prevents heavy stones from sagging",
+        "Absorbs thermal movements",
+        "Ideal for external elevations and high rise applications"
+      ]),
+      specsJson: JSON.stringify({
+        "Appearance": "Grey or White Powder",
+        "Tensile Adhesion": "> 2.0 N/mm²",
+        "Adjustability Time": "30 minutes",
+        "Full Cure Time": "14 days"
+      }),
+      isFeatured: 0,
+      isActive: 1,
+      seoTitle: "Tile Grip Premium Plus - Flexible Tile & Stone Adhesive",
+      seoDescription: "High performance Tile Grip Premium Plus flexible tile adhesive for large vitrified tiles, granite, and marble facade cladding.",
+      imageUrl: "https://res.cloudinary.com/dmohmgbut/image/upload/v1782198109/3._Tile_Grip_Premium_Plus_s35asl.png",
+      galleryImagesJson: "[]",
+      price: "Contact for Quote",
+      sortOrder: 3
+    },
+    {
+      id: "prod-tg-premium-pro",
+      categoryId: "cat-tile",
+      name: "Tile Grip Premium Pro",
+      slug: "tile-grip-premium-pro",
+      shortDescription: "Professional grade high bond tile adhesive for internal & external cladding.",
+      longDescription: "Tile Grip Premium Pro is a professional-grade, high-polymer-modified tile and stone adhesive engineered for high-demand applications, including heavy vitrified tiles, granite, sandstone, and marble on wall cladding and external areas.",
+      packaging: "20 Kg bag",
+      coverage: "Approx. 40-50 sq. ft. per 20 kg bag at 3-4mm thickness.",
+      applicationType: "Heavy Duty Tile & Stone Cladding (Walls & Floors)",
+      productType: "Professional polymer-fortified cementitious matrix",
+      featuresJson: JSON.stringify([
+        "Ultra-high bond strength",
+        "Superior non-sag properties on vertical claddings",
+        "Excellent shock and impact resistance",
+        "Excellent pot life"
+      ]),
+      benefitsJson: JSON.stringify([
+        "Perfect for external wall claddings",
+        "Secures heavy granite and marble tiles",
+        "Long-term structural reliability"
+      ]),
+      specsJson: JSON.stringify({
+        "Appearance": "Grey or White Powder",
+        "Tensile Adhesion": "> 2.2 N/mm²",
+        "Open Time": "30 minutes",
+        "Cure Time": "24 hours"
+      }),
+      isFeatured: 0,
+      isActive: 1,
+      seoTitle: "Tile Grip Premium Pro - Professional Stone & Tile Cladding Adhesive",
+      seoDescription: "Buy Tile Grip Premium Pro professional grade stone adhesive. Ideal for interior and exterior tile claddings, heavy granites, and facades.",
+      imageUrl: "https://res.cloudinary.com/dmohmgbut/image/upload/v1782198112/4._1_Tile_Grip_Premium_PRO_q9o2pb.png",
+      galleryImagesJson: "[]",
+      price: "Contact for Quote",
+      sortOrder: 4
     },
     {
       id: "prod-tf-720",
@@ -169,7 +251,11 @@ async function main() {
       isFeatured: 0,
       isActive: 1,
       seoTitle: "Tile Fix 720 - White Flexible Adhesive for Glass Mosaics",
-      seoDescription: "Learn more about Tile Fix 720 white cement based elastic tile adhesive. Ideal for swimming pools, glass mosaics, and large format stones."
+      seoDescription: "Learn more about Tile Fix 720 white cement based elastic tile adhesive. Ideal for swimming pools, glass mosaics, and large format stones.",
+      imageUrl: "https://res.cloudinary.com/dmohmgbut/image/upload/v1782198103/4._2_ARKA_720_p7gef3.jpg",
+      galleryImagesJson: "[]",
+      price: "Contact for Quote",
+      sortOrder: 5
     },
     // Block Joining
     {
@@ -203,7 +289,11 @@ async function main() {
       isFeatured: 1,
       isActive: 1,
       seoTitle: "Block Fix AAC Block Joining Mortar | ARKA CRETE",
-      seoDescription: "Upgrade to Block Fix premium AAC block adhesive. Thin-bed self-curing mortar for fast, clean, and strong block masonry."
+      seoDescription: "Upgrade to Block Fix premium AAC block adhesive. Thin-bed self-curing mortar for fast, clean, and strong block masonry.",
+      imageUrl: "https://res.cloudinary.com/dmohmgbut/image/upload/v1782198103/8._ARKA_BLOCK_FIX_z7sawk.png",
+      galleryImagesJson: "[]",
+      price: "Contact for Quote",
+      sortOrder: 6
     },
     // Grouts & Anchoring
     {
@@ -236,7 +326,11 @@ async function main() {
       isFeatured: 0,
       isActive: 1,
       seoTitle: "Tile Grout 721 - Cementitious Tile Joint Filler",
-      seoDescription: "Choose Tile Grout 721 polymer modified cementitious joint grout for beautiful, non-crack, color-fast tile joints."
+      seoDescription: "Choose Tile Grout 721 polymer modified cementitious joint grout for beautiful, non-crack, color-fast tile joints.",
+      imageUrl: "https://res.cloudinary.com/dmohmgbut/image/upload/v1782198104/5._ARKA_GROUT_721_cvcwz1.jpg",
+      galleryImagesJson: "[]",
+      price: "Contact for Quote",
+      sortOrder: 7
     },
     {
       id: "prod-ep-epoxy",
@@ -268,7 +362,14 @@ async function main() {
       isFeatured: 1,
       isActive: 1,
       seoTitle: "EP Epoxy Grout - Stain-free Industrial Joint Grout",
-      seoDescription: "Get EP Epoxy Grout three-component stain-free grout for commercial kitchens, hospitals, and pools. Maximum hygiene and stain protection."
+      seoDescription: "Get EP Epoxy Grout three-component stain-free grout for commercial kitchens, hospitals, and pools. Maximum hygiene and stain protection.",
+      imageUrl: "https://res.cloudinary.com/dmohmgbut/image/upload/v1782198103/6._4_EP_PART_C_zdqt4c.png",
+      galleryImagesJson: JSON.stringify([
+        "https://res.cloudinary.com/dmohmgbut/image/upload/v1782198104/6._2_EP_PART_A_i6ubpq.png",
+        "https://res.cloudinary.com/dmohmgbut/image/upload/v1782198104/6._3_EP_PART_B_i5cfve.png"
+      ]),
+      price: "Contact for Quote",
+      sortOrder: 8
     },
     {
       id: "prod-fg-50",
@@ -300,7 +401,11 @@ async function main() {
       isFeatured: 0,
       isActive: 1,
       seoTitle: "Free Grout 50 - Non-Shrink Foundation Grout | ARKA CRETE",
-      seoDescription: "Configure Free Grout 50 high-early-strength flowable non-shrink cementitious grout for machinery baseplates and anchoring."
+      seoDescription: "Configure Free Grout 50 high-early-strength flowable non-shrink cementitious grout for machinery baseplates and anchoring.",
+      imageUrl: "https://res.cloudinary.com/dmohmgbut/image/upload/v1782198103/10._ARKA_FREE_GROUT-50_msisas.png",
+      galleryImagesJson: "[]",
+      price: "Contact for Quote",
+      sortOrder: 9
     },
     {
       id: "prod-fg-70",
@@ -332,7 +437,11 @@ async function main() {
       isFeatured: 0,
       isActive: 1,
       seoTitle: "Free Grout 70 - Ultra-High Strength Industrial Grout",
-      seoDescription: "Read about Free Grout 70 dual expansion grout for turbines, bridge bearings, and dynamic heavy loads. 70 N/mm² strength."
+      seoDescription: "Read about Free Grout 70 dual expansion grout for turbines, bridge bearings, and dynamic heavy loads. 70 N/mm² strength.",
+      imageUrl: null,
+      galleryImagesJson: "[]",
+      price: "Contact for Quote",
+      sortOrder: 10
     },
     {
       id: "prod-polygrout",
@@ -363,7 +472,11 @@ async function main() {
       isFeatured: 0,
       isActive: 1,
       seoTitle: "Polygrout - Polymer-Modified Structural Repair Grout",
-      seoDescription: "Choose Polygrout for concrete patching and jointing. Outstanding bond strength and durable polymer matrix."
+      seoDescription: "Choose Polygrout for concrete patching and jointing. Outstanding bond strength and durable polymer matrix.",
+      imageUrl: "https://res.cloudinary.com/dmohmgbut/image/upload/v1782198156/12._2_ARKA_POLYGROUT_PART-A_pon0xa.png",
+      galleryImagesJson: "[]",
+      price: "Contact for Quote",
+      sortOrder: 11
     },
     {
       id: "prod-expacem-225",
@@ -394,7 +507,11 @@ async function main() {
       isFeatured: 0,
       isActive: 1,
       seoTitle: "Expacem 225 - Starter Bar & Anchoring Grout",
-      seoDescription: "Discover Expacem 225 expansive anchoring grout. Best for anchoring starter bars, tie-rods, and foundation bolts with high pullout loads."
+      seoDescription: "Discover Expacem 225 expansive anchoring grout. Best for anchoring starter bars, tie-rods, and foundation bolts with high pullout loads.",
+      imageUrl: "https://res.cloudinary.com/dmohmgbut/image/upload/v1782198161/11._ARKA_EXPACEM_225_qgyhnv.png",
+      galleryImagesJson: "[]",
+      price: "Contact for Quote",
+      sortOrder: 12
     },
     // Repair Products
     {
@@ -427,7 +544,11 @@ async function main() {
       isFeatured: 1,
       isActive: 1,
       seoTitle: "Microcrete - Non-Shrink Column Jacketing Concrete | ARKA CRETE",
-      seoDescription: "Order Microcrete for structural concrete repairs and column jacketing. Highly flowable, non-shrink, ready-to-use formulation."
+      seoDescription: "Order Microcrete for structural concrete repairs and column jacketing. Highly flowable, non-shrink, ready-to-use formulation.",
+      imageUrl: "https://res.cloudinary.com/dmohmgbut/image/upload/v1782198103/7._ARKA_MICROCRETE_a3un02.png",
+      galleryImagesJson: "[]",
+      price: "Contact for Quote",
+      sortOrder: 13
     },
     {
       id: "prod-rep-111",
@@ -459,7 +580,11 @@ async function main() {
       isFeatured: 0,
       isActive: 1,
       seoTitle: "Rep 111 - Overhead & Vertical Concrete Repair Mortar",
-      seoDescription: "Apply Rep 111 polymer-modified mortar for vertical concrete repairs, ceilings, and column repairs. Superb thixotropic property prevents sag."
+      seoDescription: "Apply Rep 111 polymer-modified mortar for vertical concrete repairs, ceilings, and column repairs. Superb thixotropic property prevents sag.",
+      imageUrl: "https://res.cloudinary.com/dmohmgbut/image/upload/v1782198153/9._ARKA_REP111_adtsip.jpg",
+      galleryImagesJson: "[]",
+      price: "Contact for Quote",
+      sortOrder: 14
     },
     // Waterproofing
     {
@@ -492,7 +617,11 @@ async function main() {
       isFeatured: 1,
       isActive: 1,
       seoTitle: "Arkacoat FX - Two-Component Waterproofing Membrane | ARKA CRETE",
-      seoDescription: "Apply Arkacoat FX flexible polymer modified waterproofing coating for bathrooms, balconies, basements, and water tanks. Prevents leakage."
+      seoDescription: "Apply Arkacoat FX flexible polymer modified waterproofing coating for bathrooms, balconies, basements, and water tanks. Prevents leakage.",
+      imageUrl: "https://res.cloudinary.com/dmohmgbut/image/upload/v1782198153/16._2_ARKACOAT_FX_PART_A_rqtkst.png",
+      galleryImagesJson: "[]",
+      price: "Contact for Quote",
+      sortOrder: 15
     },
     {
       id: "prod-arkaguard-iwpl",
@@ -524,7 +653,11 @@ async function main() {
       isFeatured: 0,
       isActive: 1,
       seoTitle: "Arkaguard IWPL - Integral Liquid Waterproofing Additive",
-      seoDescription: "Use Arkaguard IWPL integral liquid waterproofing compound for slab castings, brick masonry, and structural concrete. Only 200ml per bag."
+      seoDescription: "Use Arkaguard IWPL integral liquid waterproofing compound for slab castings, brick masonry, and structural concrete. Only 200ml per bag.",
+      imageUrl: "https://res.cloudinary.com/dmohmgbut/image/upload/v1782198152/14._ARKAGUARD_WPL_p3rjyo.png",
+      galleryImagesJson: "[]",
+      price: "Contact for Quote",
+      sortOrder: 16
     },
     {
       id: "prod-arkabond-sbr",
@@ -556,7 +689,11 @@ async function main() {
       isFeatured: 0,
       isActive: 1,
       seoTitle: "Arkabond SBR - Concrete Bonding Agent & Polymer Latex",
-      seoDescription: "Choose Arkabond SBR high-performance copolymer latex bonding agent for concrete repairs, waterproof screeds, and key coat plasters."
+      seoDescription: "Choose Arkabond SBR high-performance copolymer latex bonding agent for concrete repairs, waterproof screeds, and key coat plasters.",
+      imageUrl: "https://res.cloudinary.com/dmohmgbut/image/upload/v1782198152/15._ARKABOND_SBR_xh0m4m.png",
+      galleryImagesJson: "[]",
+      price: "Contact for Quote",
+      sortOrder: 17
     }
   ];
 

@@ -395,3 +395,385 @@ export default function Hero() {
     </section>
   );
 }
+
+
+// "use client";
+
+// import React, { useState, useEffect } from "react";
+// import Image from "next/image";
+// import Link from "next/link";
+// import { motion, AnimatePresence } from "framer-motion";
+
+// const slides = [
+//   {
+//     index: "01",
+//     category: "Tile Adhesives",
+//     headlineTop: "Your Strength,",
+//     headlineBottom: "Our Priority",
+//     highlightWord: "Priority",
+//     description:
+//       "Polymer-modified adhesives formulated for tensile bond strengths exceeding IS 15477 standards — tested every batch, every time.",
+//     stats: [
+//       { value: "3.5 MPa", label: "Tensile Bond" },
+//       { value: "IS 15477", label: "Certified" },
+//       { value: "C2TE", label: "Grade" },
+//     ],
+//     productImage:
+//       "https://res.cloudinary.com/dmohmgbut/image/upload/q_auto/f_auto/v1781852144/2._Tile_Grip_Premium_ranlb2.png",
+//     productLabel: "Tile Grip Premium",
+//   },
+//   {
+//     index: "02",
+//     category: "Block Joining Mortars",
+//     headlineTop: "Innovation",
+//     headlineBottom: "At Work",
+//     highlightWord: "Work",
+//     description:
+//       "Thin-bed AAC jointing mortar that cuts masonry time by 40% and reduces structural dead load without sacrificing joint integrity.",
+//     stats: [
+//       { value: "≤3 mm", label: "Joint Thickness" },
+//       { value: "40%", label: "Time Saved" },
+//       { value: "AAC", label: "Compatible" },
+//     ],
+//     productImage:
+//       "https://res.cloudinary.com/dmohmgbut/image/upload/q_auto/f_auto/v1781850504/BLOCK_FIX_ycpmsh.png",
+//     productLabel: "Block Fix — AAC Grade",
+//   },
+//   {
+//     index: "03",
+//     category: "Waterproofing",
+//     headlineTop: "Excellence in",
+//     headlineBottom: "Every Structure",
+//     highlightWord: "Structure",
+//     description:
+//       "Flexible cementitious coatings and crystalline systems built for podiums, bathrooms, retaining walls, and terraces.",
+//     stats: [
+//       { value: "Type B", label: "Classification" },
+//       { value: "MSME", label: "Green Park" },
+//       { value: "10+ Yr", label: "Track Record" },
+//     ],
+//     productImage:
+//       "https://res.cloudinary.com/dmohmgbut/image/upload/q_auto/f_auto/v1781852247/ARKAGUARD_WPL_x9zp5o.png",
+//     productLabel: "Arkaguard WPL",
+//   },
+// ];
+
+// const ORANGE = "#E8651A";
+
+// const fadeInUp = {
+//   enter: { opacity: 0, y: 20 },
+//   center: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } },
+//   exit: { opacity: 0, y: -10, transition: { duration: 0.25, ease: "easeIn" } },
+// };
+
+// const productAnim = {
+//   enter: { opacity: 0, scale: 0.92 },
+//   center: { opacity: 1, scale: 1, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
+//   exit: { opacity: 0, scale: 0.96, transition: { duration: 0.3, ease: "easeIn" } },
+// };
+
+// export default function Hero() {
+//   const [current, setCurrent] = useState(0);
+
+//   useEffect(() => {
+//     const t = setInterval(() => setCurrent((p) => (p + 1) % slides.length), 6000);
+//     return () => clearInterval(t);
+//   }, []);
+
+//   const slide = slides[current];
+//   const rest = slide.headlineBottom.replace(slide.highlightWord, "").trim();
+
+//   return (
+//     <section
+//       className="relative w-full overflow-hidden"
+//       style={{ minHeight: "min(90vh, 820px)", maxHeight: "820px" }}
+//     >
+//       {/* ─── Unified Background ─────────────────────────────── */}
+//       {/* Base dark gradient */}
+//       <div
+//         className="absolute inset-0 z-0"
+//         style={{
+//           background: `radial-gradient(ellipse at 70% 50%, #2a1f1a 0%, #171310 65%, #0e0c0a 100%)`,
+//         }}
+//       />
+
+//       {/* Diagonal line pattern – 45° subtle lines */}
+//       <div
+//         className="absolute inset-0 z-0 pointer-events-none"
+//         style={{
+//           backgroundImage: `
+//             repeating-linear-gradient(
+//               45deg,
+//               transparent,
+//               transparent 40px,
+//               rgba(255, 255, 255, 0.02) 40px,
+//               rgba(255, 255, 255, 0.02) 41px
+//             )
+//           `,
+//         }}
+//       />
+
+//       {/* Second diagonal layer – finer lines for depth */}
+//       <div
+//         className="absolute inset-0 z-0 pointer-events-none"
+//         style={{
+//           backgroundImage: `
+//             repeating-linear-gradient(
+//               -45deg,
+//               transparent,
+//               transparent 80px,
+//               rgba(255, 255, 255, 0.015) 80px,
+//               rgba(255, 255, 255, 0.015) 81px
+//             )
+//           `,
+//         }}
+//       />
+
+//       {/* Warm orange glow on the right */}
+//       <div
+//         className="absolute inset-0 z-0 pointer-events-none"
+//         style={{
+//           background: `radial-gradient(ellipse at 80% 50%, rgba(232,101,26,0.12) 0%, transparent 60%)`,
+//         }}
+//       />
+
+//       {/* Light diagonal accent line (decorative) */}
+//       <div
+//         className="absolute top-0 right-0 w-1/3 h-px z-0 pointer-events-none"
+//         style={{
+//           background: `linear-gradient(90deg, transparent, ${ORANGE}40, transparent)`,
+//           transform: "rotate(-12deg) translateX(30%)",
+//         }}
+//       />
+
+//       {/* ─── Main Content ───────────────────────────────────── */}
+//       <div className="relative z-10 h-full flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 px-6 sm:px-10 lg:px-16 xl:px-20 py-12">
+//         {/* Left: Text */}
+//         <div className="flex-1 max-w-xl lg:max-w-2xl w-full">
+//           <AnimatePresence mode="wait">
+//             <motion.div
+//               key={`text-${current}`}
+//               variants={fadeInUp}
+//               initial="enter"
+//               animate="center"
+//               exit="exit"
+//               className="flex flex-col gap-5"
+//             >
+//               {/* Eyebrow + index */}
+//               <div className="flex items-center gap-4">
+//                 <span
+//                   className="text-[10px] font-bold uppercase tracking-[0.13em] text-white px-3 py-1 rounded-sm"
+//                   style={{ background: ORANGE }}
+//                 >
+//                   {slide.category}
+//                 </span>
+//                 <span className="font-mono text-[10px] text-white/30 tracking-[0.1em]">
+//                   {slide.index} / 03
+//                 </span>
+//               </div>
+
+//               {/* Headline */}
+//               <div>
+//                 <h1 className="text-4xl sm:text-5xl xl:text-6xl font-black text-white leading-[1.05] tracking-[-0.025em]">
+//                   {slide.headlineTop}
+//                 </h1>
+//                 <h1 className="text-4xl sm:text-5xl xl:text-6xl font-black leading-[1.05] tracking-[-0.025em] mt-0.5">
+//                   {rest && <span className="text-white">{rest} </span>}
+//                   <span className="relative inline-block text-white">
+//                     {slide.highlightWord}
+//                     <span
+//                       className="absolute left-0 right-0 -bottom-0.5 h-[5px] rounded-sm"
+//                       style={{ background: ORANGE }}
+//                     />
+//                   </span>
+//                 </h1>
+//               </div>
+
+//               {/* Description */}
+//               <p className="text-sm sm:text-base leading-relaxed text-white/60 max-w-md">
+//                 {slide.description}
+//               </p>
+
+//               {/* Stats — glass-morphism cards */}
+//               <div className="grid grid-cols-3 gap-3 mt-1">
+//                 {slide.stats.map((s, i) => (
+//                   <div
+//                     key={i}
+//                     className="rounded-lg border border-white/10 bg-white/5 backdrop-blur-sm px-4 py-3 text-center"
+//                   >
+//                     <div className="text-base sm:text-lg font-black text-white tracking-tight font-mono">
+//                       {s.value}
+//                     </div>
+//                     <div className="text-[9px] uppercase tracking-[0.1em] text-white/40 mt-0.5">
+//                       {s.label}
+//                     </div>
+//                   </div>
+//                 ))}
+//               </div>
+
+//               {/* CTAs */}
+//               <div className="flex flex-wrap items-center gap-4 mt-2">
+//                 <Link
+//                   href="/products"
+//                   className="inline-flex h-11 items-center gap-2 text-white text-[11px] font-bold uppercase tracking-[0.1em] px-6 rounded-lg transition-all hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
+//                   style={{
+//                     background: ORANGE,
+//                     boxShadow: "0 4px 20px rgba(232,101,26,0.35)",
+//                   }}
+//                 >
+//                   View Product
+//                   <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
+//                     <path
+//                       d="M3 8h10M9 4l4 4-4 4"
+//                       stroke="currentColor"
+//                       strokeWidth="1.8"
+//                       strokeLinecap="round"
+//                       strokeLinejoin="round"
+//                     />
+//                   </svg>
+//                 </Link>
+//                 <Link
+//                   href="/contact"
+//                   className="text-[11px] font-semibold uppercase tracking-[0.08em] text-white/40 hover:text-white/80 transition-colors underline underline-offset-4 decoration-white/20"
+//                 >
+//                   Request Sample
+//                 </Link>
+//               </div>
+
+//               {/* Trust strip — dark glass */}
+//               <div className="flex flex-wrap items-center gap-2.5 px-4 py-3 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm mt-1">
+//                 {[
+//                   { icon: true, label: "IS Certified" },
+//                   { label: "MSME Park" },
+//                   { label: "Hyderabad" },
+//                   { label: "Since 2012" },
+//                   { label: "Free Sample" },
+//                 ].map((item, i) => (
+//                   <React.Fragment key={i}>
+//                     {i > 0 && <div className="w-px h-3 bg-white/20 shrink-0" />}
+//                     <div className="flex items-center gap-1.5 text-[9.5px] font-semibold uppercase tracking-[0.06em] text-white/40 whitespace-nowrap">
+//                       {item.icon && (
+//                         <svg width="11" height="11" viewBox="0 0 16 16" fill="none">
+//                           <path
+//                             d="M8 2l1.5 3 3.3.5-2.4 2.3.6 3.3L8 9.5l-3 1.6.6-3.3L3.2 5.5l3.3-.5L8 2z"
+//                             fill={ORANGE}
+//                           />
+//                         </svg>
+//                       )}
+//                       {item.label}
+//                     </div>
+//                   </React.Fragment>
+//                 ))}
+//               </div>
+//             </motion.div>
+//           </AnimatePresence>
+//         </div>
+
+//         {/* Right: Product Visual */}
+//         <div className="flex-1 flex items-center justify-center w-full max-w-md lg:max-w-lg xl:max-w-xl">
+//           <AnimatePresence mode="wait">
+//             <motion.div
+//               key={`product-${current}`}
+//               variants={productAnim}
+//               initial="enter"
+//               animate="center"
+//               exit="exit"
+//               className="relative w-full flex flex-col items-center"
+//             >
+//               {/* Product container with consistent background */}
+//               <div className="relative w-full aspect-square max-w-[360px] sm:max-w-[400px] lg:max-w-[420px] mx-auto">
+//                 {/* Glow behind product */}
+//                 <div
+//                   className="absolute inset-0 rounded-full blur-3xl pointer-events-none"
+//                   style={{
+//                     background: `radial-gradient(circle, ${ORANGE}30, transparent 70%)`,
+//                   }}
+//                 />
+
+//                 {/* Subtle diagonal line pattern inside the product area (matches background) */}
+//                 <div
+//                   className="absolute inset-0 pointer-events-none rounded-2xl"
+//                   style={{
+//                     backgroundImage: `
+//                       repeating-linear-gradient(
+//                         45deg,
+//                         transparent,
+//                         transparent 40px,
+//                         rgba(255,255,255,0.02) 40px,
+//                         rgba(255,255,255,0.02) 41px
+//                       )
+//                     `,
+//                   }}
+//                 />
+
+//                 {/* Corner brackets */}
+//                 {(["tl", "tr", "bl", "br"] as const).map((c) => (
+//                   <div
+//                     key={c}
+//                     className="absolute w-6 h-6 pointer-events-none"
+//                     style={{
+//                       top: c.startsWith("t") ? 0 : "auto",
+//                       bottom: c.startsWith("b") ? 0 : "auto",
+//                       left: c.endsWith("l") ? 0 : "auto",
+//                       right: c.endsWith("r") ? 0 : "auto",
+//                       borderTop: c.startsWith("t") ? `2px solid ${ORANGE}40` : undefined,
+//                       borderBottom: c.startsWith("b") ? `2px solid ${ORANGE}40` : undefined,
+//                       borderLeft: c.endsWith("l") ? `2px solid ${ORANGE}40` : undefined,
+//                       borderRight: c.endsWith("r") ? `2px solid ${ORANGE}40` : undefined,
+//                     }}
+//                   />
+//                 ))}
+
+//                 <Image
+//                   src={slide.productImage}
+//                   alt={slide.productLabel}
+//                   fill
+//                   className="object-contain p-4 drop-shadow-2xl"
+//                   priority={current === 0}
+//                 />
+//               </div>
+
+//               {/* Product label */}
+//               <div className="flex items-center gap-3 mt-4">
+//                 <div
+//                   className="w-1 h-6 shrink-0 rounded-full"
+//                   style={{ background: ORANGE }}
+//                 />
+//                 <span className="text-xs font-bold uppercase tracking-[0.14em] text-white/50">
+//                   {slide.productLabel}
+//                 </span>
+//               </div>
+
+//               {/* Slide dots */}
+//               <div className="flex items-center gap-2 mt-5">
+//                 {slides.map((_, idx) => (
+//                   <button
+//                     key={idx}
+//                     onClick={() => setCurrent(idx)}
+//                     className={`h-[2px] transition-all duration-500 rounded-full ${current === idx
+//                         ? "w-6 bg-[#E8651A]"
+//                         : "w-2.5 bg-white/20 hover:bg-white/40"
+//                       }`}
+//                     aria-label={`Slide ${idx + 1}`}
+//                   />
+//                 ))}
+//               </div>
+//             </motion.div>
+//           </AnimatePresence>
+//         </div>
+//       </div>
+
+//       {/* ─── Progress Bar ────────────────────────────────────── */}
+//       <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-white/5 z-10">
+//         <motion.div
+//           className="h-full"
+//           style={{ background: ORANGE }}
+//           initial={{ width: "0%" }}
+//           animate={{ width: "100%" }}
+//           key={current}
+//           transition={{ duration: 6, ease: "linear" }}
+//         />
+//       </div>
+//     </section>
+//   );
+// }

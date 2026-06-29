@@ -72,6 +72,10 @@ export const products = sqliteTable("products", {
   createdAt: text("created_at").default("datetime('now')"),
   updatedAt: text("updated_at").default("datetime('now')"),
   deletedAt: text("deleted_at"),
+  imageUrl: text("image_url"),
+  galleryImagesJson: text("gallery_images_json"), // holds stringified JSON array of additional image URLs
+  price: text("price"),
+  sortOrder: integer("sort_order").default(0),
 });
 
 // 7. Product Images table

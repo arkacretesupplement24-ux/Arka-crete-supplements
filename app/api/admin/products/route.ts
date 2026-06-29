@@ -14,10 +14,11 @@ export async function GET(request: Request) {
     const list = await db
       .select()
       .from(products)
-      .orderBy(desc(products.createdAt));
+      .orderBy(products.sortOrder, desc(products.createdAt));
 
     return NextResponse.json({ success: true, products: list });
-  } catch {
+  } catch (error) {
+    console.error("GET Products Error:", error);
     return NextResponse.json({ success: false, error: "Failed to fetch products" }, { status: 500 });
   }
 }
@@ -47,6 +48,10 @@ export async function POST(request: Request) {
       isActive,
       seoTitle,
       seoDescription,
+      imageUrl,
+      galleryImagesJson,
+      price,
+      sortOrder,
     } = body;
 
     if (!categoryId || !name || !slug) {
@@ -73,6 +78,10 @@ export async function POST(request: Request) {
       isActive: isActive ? 1 : 0,
       seoTitle: seoTitle || null,
       seoDescription: seoDescription || null,
+      imageUrl: imageUrl || null,
+      galleryImagesJson: galleryImagesJson || "[]",
+      price: price || null,
+      sortOrder: sortOrder !== undefined ? Number(sortOrder) : 0,
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
     };
@@ -122,6 +131,11 @@ export async function PATCH(request: Request) {
     if (!before) {
       return NextResponse.json({ success: false, error: "Product not found" }, { status: 404 });
     }
+
+    // Ensure types match schema requirements
+    if (updates.isFeatured !== undefined) updates.isFeatured = updates.isFeatured ? 1 : 0;
+    if (updates.isActive !== undefined) updates.isActive = updates.isActive ? 1 : 0;
+    if (updates.sortOrder !== undefined) updates.sortOrder = Number(updates.sortOrder);
 
     const updatedProduct = {
       ...before,
@@ -175,27 +189,27 @@ export async function DELETE(request: Request) {
       return NextResponse.json({ success: false, error: "Product not found" }, { status: 404 });
     }
 
-    // Toggle active status (soft delete behavior)
-    const newActive = before.isActive === 1 ? 0 : 1;
-    await db.update(products).set({ isActive: newActive, updatedAt: new Date().toISOString() }).where(eq(products.id, id));
+    // Hard delete of the product row
+    await db.delete(products).where(eq(products.id, id));
 
     // Audit Logging
     const logId = `log-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
     await db.insert(auditLogs).values({
       id: logId,
       actorUserId: session.userId as string,
-      action: newActive === 0 ? "product_deactivate" : "product_activate",
+      action: "product_delete",
       entityType: "products",
       entityId: id,
       beforeJson: JSON.stringify(before),
-      afterJson: JSON.stringify({ ...before, isActive: newActive }),
+      afterJson: null,
       ipAddress: request.headers.get("x-forwarded-for") || "127.0.0.1",
       userAgent: request.headers.get("user-agent") || "unknown",
       createdAt: new Date().toISOString(),
     });
 
-    return NextResponse.json({ success: true, message: `Product ${newActive === 0 ? "deactivated" : "activated"} successfully` });
-  } catch {
-    return NextResponse.json({ success: false, error: "Failed to toggle product status" }, { status: 500 });
+    return NextResponse.json({ success: true, message: "Product deleted successfully" });
+  } catch (error) {
+    console.error("Product Delete Error:", error);
+    return NextResponse.json({ success: false, error: "Failed to delete product" }, { status: 500 });
   }
 }

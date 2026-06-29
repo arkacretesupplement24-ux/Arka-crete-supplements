@@ -138,13 +138,7 @@ export default function Header() {
             >
               Infrastructure
             </Link>
-            <Link
-              href="/downloads"
-              className={`transition-colors hover:text-brand-orange ${isActive("/downloads") ? "text-brand-orange" : ""
-                }`}
-            >
-              Downloads
-            </Link>
+
             <Link
               href="/contact"
               className={`transition-colors hover:text-brand-orange ${isActive("/contact") ? "text-brand-orange" : ""
@@ -211,9 +205,7 @@ export default function Header() {
               <Link href="/infrastructure" onClick={toggleMenu} className="py-2 border-b border-stone-50">
                 Infrastructure
               </Link>
-              <Link href="/downloads" onClick={toggleMenu} className="py-2 border-b border-stone-50">
-                Downloads
-              </Link>
+
               <Link href="/contact" onClick={toggleMenu} className="py-2 border-b border-stone-50">
                 Contact
               </Link>

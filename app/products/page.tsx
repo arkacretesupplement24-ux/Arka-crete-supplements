@@ -22,10 +22,14 @@ export default async function ProductsPage() {
       packaging: products.packaging,
       applicationType: products.applicationType,
       isFeatured: products.isFeatured,
-      isActive: products.isActive
+      isActive: products.isActive,
+      imageUrl: products.imageUrl,
+      price: products.price,
+      sortOrder: products.sortOrder
     })
     .from(products)
-    .where(eq(products.isActive, 1));
+    .where(eq(products.isActive, 1))
+    .orderBy(products.sortOrder);
 
   const allCategories = await db
     .select({

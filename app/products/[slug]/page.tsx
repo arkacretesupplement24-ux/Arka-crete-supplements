@@ -49,7 +49,9 @@ export default async function ProductDetailPage({ params }: PageProps) {
     .select({
       name: products.name,
       slug: products.slug,
-      shortDescription: products.shortDescription
+      shortDescription: products.shortDescription,
+      imageUrl: products.imageUrl,
+      packaging: products.packaging
     })
     .from(products)
     .where(

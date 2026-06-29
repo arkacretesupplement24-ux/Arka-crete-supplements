@@ -23,11 +23,11 @@ export default function Footer() {
         <div className="space-y-4">
           <Link href="/" className="flex items-center select-none py-0.5">
             <Image
-              src="/ARKA logo.png"
+              src="/white-logo.png"
               alt="ARKA CRETE"
-              width={200}
+              width={250}
               height={60}
-              className="object-contain h-14 w-auto"
+              className="object-contain h-20 w-auto"
             />
           </Link>
           <p className="text-xs text-stone-400 leading-relaxed pt-2">
@@ -114,13 +114,14 @@ export default function Footer() {
             </span>
           </p>
           <div className="pt-2">
-            <Link 
-              href="/downloads" 
+            <a
+              href="/ARKA CRETE_BROCHURE.pdf"
+              download="ARKA_CRETE_Brochure.pdf"
               className="inline-flex items-center gap-1.5 text-xs text-brand-orange hover:text-white font-bold tracking-wider uppercase"
             >
               <FileText className="w-4 h-4" />
               Download Brochure
-            </Link>
+            </a>
           </div>
         </div>
       </div>

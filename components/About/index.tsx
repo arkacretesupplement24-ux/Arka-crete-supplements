@@ -10,7 +10,7 @@ export default function About() {
       {/* Page Title */}
       <section className="bg-brand-deep py-20 px-6 text-center text-white relative">
         <div className="max-w-4xl mx-auto z-10 relative">
-          <h1 className="text-4xl font-extrabold sm:text-5xl uppercase tracking-wider">About Us</h1>
+          <h1 className="text-3xl font-normal sm:text-4xl uppercase tracking-wide font-zen">About Us</h1>
           <p className="text-stone-300 text-sm mt-4 max-w-md mx-auto">
             Arka Crete Supplements LLP: Engineering advanced construction chemicals for architectural integrity.
           </p>

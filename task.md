@@ -11,6 +11,8 @@
 - [x] Redesign Featured Products section in components/Home/index.tsx with 3D pop-out image hover effects and specifications layout
 - [x] Integrate brand logo image ARKA logo.png in global Header.tsx and Footer.tsx
 - [x] Implement professional client-side loading SplashScreen.tsx and integrate in layout.tsx
+- [x] Integrate and connect with Turso serverless SQL database and seed initial data
+
 
 
 
