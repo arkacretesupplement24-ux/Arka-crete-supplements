@@ -39,6 +39,7 @@ export default function Infrastructure() {
               src="/arka_commercial_bg.png"
               alt="Concrete block dry-mix automated packaging unit"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover opacity-85"
             />
           </div>
@@ -53,6 +54,7 @@ export default function Infrastructure() {
               src="/arka_hero_bg.png"
               alt="Quality testing laboratory tensile testing machine"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover opacity-85"
             />
           </div>

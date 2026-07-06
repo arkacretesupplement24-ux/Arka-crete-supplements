@@ -258,6 +258,7 @@ export default function SplashScreen() {
                   alt="ARKA CRETE"
                   fill
                   priority
+                  sizes="(max-width: 768px) 200px, 380px"
                   className="object-contain drop-shadow-xl"
                 />
               </div>

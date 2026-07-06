@@ -39,6 +39,7 @@ export default function About() {
               src="/arka_interior_bg.png"
               alt="Concrete engineering research office interior"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover opacity-85"
             />
           </div>

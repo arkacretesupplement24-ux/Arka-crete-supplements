@@ -23,6 +23,7 @@ interface ProductDetailProps {
     imageUrl?: string | null;
     galleryImagesJson?: string | null;
     price?: string | null;
+    pdfUrl?: string | null;
   };
   relatedProducts: Array<{
     name: string;
@@ -217,7 +218,9 @@ export default function ProductDetail({ product, relatedProducts }: ProductDetai
                 </div>
 
                 <a
-                  href="/ARKA CRETE_BROCHURE.pdf"
+                  href={product.pdfUrl || "/ARKA CRETE_BROCHURE.pdf"}
+                  target={product.pdfUrl ? "_blank" : undefined}
+                  rel={product.pdfUrl ? "noreferrer" : undefined}
                   download={`${product.name.replace(/\s+/g, "_")}_Datasheet.pdf`}
                   className="inline-flex items-center justify-center p-2.5 bg-brand-orange hover:bg-brand-orange/90 text-white rounded-lg transition-colors shadow-sm"
                   title="Download PDF"

@@ -228,6 +228,7 @@ export default function Home() {
                       src={prod.image}
                       alt={prod.name}
                       fill
+                      sizes="140px"
                       className="object-contain drop-shadow-[0_12px_22px_rgba(0,0,0,0.14)] group-hover:drop-shadow-[0_25px_30px_rgba(232,101,26,0.32)] transition-all duration-500"
                     />
                     
@@ -478,6 +479,7 @@ export default function Home() {
               src="/arka_commercial_bg.png"
               alt="Industrial construction chemicals mixing plant interior"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover opacity-85 transition-transform duration-700 group-hover:scale-105"
             />
           </div>

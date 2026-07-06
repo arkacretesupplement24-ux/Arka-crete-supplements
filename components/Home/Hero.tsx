@@ -246,6 +246,7 @@ export default function Hero() {
               alt=""
               fill
               priority={current === 0}
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover select-none"
               style={{ opacity: 0.1 }}
             />
@@ -342,6 +343,7 @@ export default function Hero() {
                   src={slide.productImage}
                   alt={slide.productLabel}
                   fill
+                  sizes="(max-width: 768px) 100vw, 330px"
                   className="object-contain p-4 transition-all duration-300 hover:scale-[1.06]"
                   priority={current === 0}
                 />

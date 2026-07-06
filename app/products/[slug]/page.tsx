@@ -1,7 +1,7 @@
 import React from "react";
 import ProductDetail from "@/components/ProductDetail";
 import { db } from "@/lib/db/client";
-import { products } from "@/lib/db/schema";
+import { products, productDocuments } from "@/lib/db/schema";
 import { eq, and, ne } from "drizzle-orm";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
@@ -44,6 +44,19 @@ export default async function ProductDetailPage({ params }: PageProps) {
     notFound();
   }
 
+  // Fetch PDF document if exists
+  const docResult = await db
+    .select()
+    .from(productDocuments)
+    .where(eq(productDocuments.productId, product.id))
+    .limit(1);
+  const doc = docResult[0];
+
+  const productWithDoc = {
+    ...product,
+    pdfUrl: doc ? doc.fileUrl : null,
+  };
+
   // Fetch related products in the same category (limit to 3)
   const relatedResult = await db
     .select({
@@ -66,7 +79,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
   return (
     <main>
       <ProductDetail 
-        product={product} 
+        product={productWithDoc} 
         relatedProducts={relatedResult} 
       />
     </main>

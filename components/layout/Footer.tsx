@@ -8,6 +8,18 @@ import { MapPin, Phone, Mail, FileText, ArrowRight } from "lucide-react";
 
 export default function Footer() {
   const pathname = usePathname();
+  const [brochureUrl, setBrochureUrl] = React.useState("/ARKA CRETE_BROCHURE.pdf");
+
+  React.useEffect(() => {
+    fetch("/api/settings")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success && data.config?.brochureUrl) {
+          setBrochureUrl(data.config.brochureUrl);
+        }
+      })
+      .catch((err) => console.error("Error fetching brochure URL in Footer:", err));
+  }, []);
 
   // Don't show public footer on admin pages
   if (pathname?.startsWith("/admin")) {
@@ -115,7 +127,9 @@ export default function Footer() {
           </p>
           <div className="pt-2">
             <a
-              href="/ARKA CRETE_BROCHURE.pdf"
+              href={brochureUrl}
+              target={brochureUrl !== "/ARKA CRETE_BROCHURE.pdf" ? "_blank" : undefined}
+              rel={brochureUrl !== "/ARKA CRETE_BROCHURE.pdf" ? "noreferrer" : undefined}
               download="ARKA_CRETE_Brochure.pdf"
               className="inline-flex items-center gap-1.5 text-xs text-brand-orange hover:text-white font-bold tracking-wider uppercase"
             >

@@ -4,8 +4,9 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { 
-  BarChart, MessageSquare, Package, FileText, LogOut, Edit, Trash2, Shield, Plus, X, Search, ChevronLeft, ChevronRight, Sparkles, Image as ImageIcon
+  BarChart, MessageSquare, Package, FileText, LogOut, Edit, Trash2, Shield, Plus, X, Search, ChevronLeft, ChevronRight, Sparkles, Image as ImageIcon, Check, Settings
 } from "lucide-react";
+import Script from "next/script";
 
 interface Inquiry {
   id: string;
@@ -44,6 +45,7 @@ interface Product {
   seoDescription: string | null;
   imageUrl: string | null;
   galleryImagesJson: string | null;
+  pdfUrl?: string | null;
   price: string | null;
   sortOrder: number;
   createdAt: string;
@@ -71,7 +73,7 @@ interface Toast {
 
 export default function AdminConsole() {
   const router = useRouter();
-  const [activeSection, setActiveSection] = useState<"dashboard" | "inquiries" | "products" | "audit-logs">("dashboard");
+  const [activeSection, setActiveSection] = useState<"dashboard" | "inquiries" | "products" | "audit-logs" | "settings">("products");
   const [loading, setLoading] = useState(true);
   const [stats, setStats] = useState({ products: 0, categories: 0, inquiries: 0 });
   const [recentInquiries, setRecentInquiries] = useState<Inquiry[]>([]);
@@ -79,6 +81,8 @@ export default function AdminConsole() {
   const [allProducts, setAllProducts] = useState<Product[]>([]);
   const [auditLogsList, setAuditLogsList] = useState<AuditLog[]>([]);
   const [isProductModalOpen, setIsProductModalOpen] = useState(false);
+  const [globalBrochureUrl, setGlobalBrochureUrl] = useState("/ARKA CRETE_BROCHURE.pdf");
+  const [isSavingSettings, setIsSavingSettings] = useState(false);
   const [editingProduct, setEditingProduct] = useState<Product | null>(null);
 
   // Toasts
@@ -119,6 +123,7 @@ export default function AdminConsole() {
     isFeatured: false,
     isActive: true,
     imageUrl: "",
+    pdfUrl: "",
     price: "",
     sortOrder: 0,
   });
@@ -166,12 +171,48 @@ export default function AdminConsole() {
     }
   };
 
+  const fetchSettings = async () => {
+    try {
+      const res = await fetch("/api/admin/settings");
+      const data = await res.json();
+      if (data.success && data.config?.brochureUrl) {
+        setGlobalBrochureUrl(data.config.brochureUrl);
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const handleSaveSettings = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSavingSettings(true);
+    try {
+      const res = await fetch("/api/admin/settings", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ brochureUrl: globalBrochureUrl }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        addToast("Global brochure URL updated successfully!");
+      } else {
+        addToast(data.error || "Failed to update settings.", "error");
+      }
+    } catch (err) {
+      console.error(err);
+      addToast("Network error. Failed to save settings.", "error");
+    } finally {
+      setIsSavingSettings(false);
+    }
+  };
+
   useEffect(() => {
     const init = async () => {
       setLoading(true);
       await fetchDashboardData();
       await fetchInquiries();
       await fetchProducts();
+      await fetchSettings();
       setLoading(false);
     };
     init();
@@ -306,6 +347,7 @@ export default function AdminConsole() {
       isFeatured: prod.isFeatured === 1,
       isActive: prod.isActive === 1,
       imageUrl: prod.imageUrl || "",
+      pdfUrl: prod.pdfUrl || "",
       price: prod.price || "",
       sortOrder: prod.sortOrder || 0,
     });
@@ -331,11 +373,78 @@ export default function AdminConsole() {
       isFeatured: false,
       isActive: true,
       imageUrl: "",
+      pdfUrl: "",
       price: "",
       sortOrder: 0,
     });
     setGalleryUrls([]);
     setIsProductModalOpen(true);
+  };
+
+  const handleImageUpload = (onSuccess: (url: string) => void) => {
+    if (typeof window === "undefined" || !(window as any).cloudinary) {
+      addToast("Upload widget is loading. Please wait a moment.", "error");
+      return;
+    }
+
+    const widget = (window as any).cloudinary.createUploadWidget({
+      cloudName: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME || "dmohmgbut",
+      apiKey: "983881997478574",
+      uploadSignature: async (callback: any, paramsToSign: any) => {
+        const res = await fetch("/api/cloudinary/signature", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ paramsToSign })
+        });
+        const data = await res.json();
+        if (data.success) {
+          callback(data.signature);
+        } else {
+          console.error("Failed to get signature:", data.error);
+        }
+      },
+      resourceType: "image",
+      multiple: false,
+      cropping: false,
+    }, (error: any, result: any) => {
+      if (!error && result && result.event === "success") {
+        onSuccess(result.info.secure_url);
+      }
+    });
+    widget.open();
+  };
+
+  const handlePdfUpload = (onSuccess: (url: string) => void) => {
+    if (typeof window === "undefined" || !(window as any).cloudinary) {
+      addToast("Upload widget is loading. Please wait a moment.", "error");
+      return;
+    }
+
+    const widget = (window as any).cloudinary.createUploadWidget({
+      cloudName: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME || "dmohmgbut",
+      apiKey: "983881997478574",
+      uploadSignature: async (callback: any, paramsToSign: any) => {
+        const res = await fetch("/api/cloudinary/signature", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ paramsToSign })
+        });
+        const data = await res.json();
+        if (data.success) {
+          callback(data.signature);
+        } else {
+          console.error("Failed to get signature:", data.error);
+        }
+      },
+      resourceType: "auto",
+      clientAllowedFormats: ["pdf"],
+      multiple: false,
+    }, (error: any, result: any) => {
+      if (!error && result && result.event === "success") {
+        onSuccess(result.info.secure_url);
+      }
+    });
+    widget.open();
   };
 
   const isValidUrl = (url: string) => {
@@ -446,10 +555,11 @@ export default function AdminConsole() {
           </Link>
           <nav className="flex flex-col gap-2">
             {([
-              { id: "dashboard", label: "Dashboard", icon: BarChart },
-              { id: "inquiries", label: "Inquiries Log", icon: MessageSquare },
+              // { id: "dashboard", label: "Dashboard", icon: BarChart },
+              // { id: "inquiries", label: "Inquiries Log", icon: MessageSquare },
               { id: "products", label: "Products CMS", icon: Package },
-              { id: "audit-logs", label: "Audit Logs", icon: FileText },
+              { id: "settings", label: "Global Settings", icon: Settings },
+              // { id: "audit-logs", label: "Audit Logs", icon: FileText },
             ] as const).map((sec) => (
               <button
                 key={sec.id}
@@ -784,6 +894,58 @@ export default function AdminConsole() {
             </div>
           )}
 
+          {/* 5. Global Settings Section */}
+          {activeSection === "settings" && (
+            <div className="bg-white border border-stone-200 rounded-2xl p-8 shadow-sm max-w-2xl space-y-6">
+              <div className="space-y-1">
+                <h3 className="text-sm font-bold uppercase tracking-wider text-brand-deep">Global Brochure Configuration</h3>
+                <p className="text-stone-400 text-xs">Upload and update the main corporate brochure PDF downloaded by customers from the site footer and floating brochure button.</p>
+              </div>
+
+              <form onSubmit={handleSaveSettings} className="space-y-6 pt-4 border-t border-stone-100">
+                <div className="space-y-2">
+                  <label className="block text-[10px] font-bold uppercase tracking-wider text-stone-500">
+                    Main Brochure PDF (Cloudinary URL)
+                  </label>
+                  <div className="flex gap-2">
+                    <input
+                      type="url"
+                      required
+                      value={globalBrochureUrl}
+                      onChange={(e) => setGlobalBrochureUrl(e.target.value)}
+                      className="flex-1 text-xs px-4 py-2.5 bg-stone-50 border border-stone-200 rounded-lg focus:outline-none focus:border-brand-orange/50"
+                      placeholder="https://res.cloudinary.com/..."
+                    />
+                    <button
+                      type="button"
+                      onClick={() => handlePdfUpload((url) => setGlobalBrochureUrl(url))}
+                      className="px-4 py-2 bg-stone-100 hover:bg-stone-200 border border-stone-250 text-stone-700 text-xs font-bold uppercase tracking-wider rounded-lg transition-colors flex items-center gap-1.5 shrink-0"
+                    >
+                      <FileText className="w-4 h-4 text-brand-orange" />
+                      Upload PDF
+                    </button>
+                  </div>
+                  {globalBrochureUrl && (
+                    <div className="text-[10px] font-semibold text-emerald-600 flex items-center gap-1">
+                      <Check className="w-3.5 h-3.5" />
+                      Brochure URL: <a href={globalBrochureUrl} target="_blank" rel="noreferrer" className="underline font-bold text-brand-orange">{globalBrochureUrl}</a>
+                    </div>
+                  )}
+                </div>
+
+                <div className="pt-4 flex justify-end">
+                  <button
+                    type="submit"
+                    disabled={isSavingSettings}
+                    className="inline-flex h-11 items-center justify-center rounded-lg bg-brand-orange text-xs font-bold uppercase tracking-wider text-white hover:bg-brand-orange/90 transition-colors shadow-md shadow-brand-orange/10 px-6 disabled:opacity-50"
+                  >
+                    {isSavingSettings ? "Saving Settings..." : "Save Settings"}
+                  </button>
+                </div>
+              </form>
+            </div>
+          )}
+
           {/* 4. Audit Logs Section */}
           {activeSection === "audit-logs" && (
             <div className="bg-white border border-stone-200 rounded-2xl p-8 shadow-sm space-y-6">
@@ -932,13 +1094,23 @@ export default function AdminConsole() {
                   <label className="block text-[10px] font-bold uppercase tracking-wider text-stone-500">
                     Primary Product Image (Cloudinary URL)
                   </label>
-                  <input
-                    type="url"
-                    value={productForm.imageUrl}
-                    onChange={(e) => setProductForm({ ...productForm, imageUrl: e.target.value })}
-                    className="w-full text-xs px-4 py-2.5 bg-stone-50 border border-stone-200 rounded-lg focus:outline-none focus:border-brand-orange/50"
-                    placeholder="https://res.cloudinary.com/..."
-                  />
+                  <div className="flex gap-2">
+                    <input
+                      type="url"
+                      value={productForm.imageUrl}
+                      onChange={(e) => setProductForm({ ...productForm, imageUrl: e.target.value })}
+                      className="flex-1 text-xs px-4 py-2.5 bg-stone-50 border border-stone-200 rounded-lg focus:outline-none focus:border-brand-orange/50"
+                      placeholder="https://res.cloudinary.com/..."
+                    />
+                    <button
+                      type="button"
+                      onClick={() => handleImageUpload((url) => setProductForm({ ...productForm, imageUrl: url }))}
+                      className="px-4 py-2 bg-stone-100 hover:bg-stone-200 border border-stone-250 text-stone-700 text-xs font-bold uppercase tracking-wider rounded-lg transition-colors flex items-center gap-1.5 shrink-0"
+                    >
+                      <ImageIcon className="w-4 h-4 text-brand-orange" />
+                      Upload
+                    </button>
+                  </div>
                   {productForm.imageUrl && (
                     <div className="mt-2">
                       {isValidUrl(productForm.imageUrl) ? (
@@ -969,17 +1141,31 @@ export default function AdminConsole() {
                   {galleryUrls.map((url, idx) => (
                     <div key={idx} className="flex gap-2 items-start bg-stone-50/50 p-3 rounded-lg border border-stone-150">
                       <div className="flex-1 space-y-1.5">
-                        <input
-                          type="url"
-                          value={url}
-                          onChange={(e) => {
-                            const updated = [...galleryUrls];
-                            updated[idx] = e.target.value;
-                            setGalleryUrls(updated);
-                          }}
-                          className="w-full text-xs px-4 py-2.5 bg-white border border-stone-200 rounded-lg focus:outline-none focus:border-brand-orange/50"
-                          placeholder="https://res.cloudinary.com/..."
-                        />
+                        <div className="flex gap-2">
+                          <input
+                            type="url"
+                            value={url}
+                            onChange={(e) => {
+                              const updated = [...galleryUrls];
+                              updated[idx] = e.target.value;
+                              setGalleryUrls(updated);
+                            }}
+                            className="flex-1 text-xs px-4 py-2.5 bg-white border border-stone-200 rounded-lg focus:outline-none focus:border-brand-orange/50"
+                            placeholder="https://res.cloudinary.com/..."
+                          />
+                          <button
+                            type="button"
+                            onClick={() => handleImageUpload((uploadedUrl) => {
+                              const updated = [...galleryUrls];
+                              updated[idx] = uploadedUrl;
+                              setGalleryUrls(updated);
+                            })}
+                            className="px-4 py-2 bg-stone-100 hover:bg-stone-200 border border-stone-250 text-stone-700 text-xs font-bold uppercase tracking-wider rounded-lg transition-colors flex items-center gap-1.5 shrink-0"
+                          >
+                            <ImageIcon className="w-4 h-4 text-brand-orange" />
+                            Upload
+                          </button>
+                        </div>
                         {url && isValidUrl(url) && (
                           <div className="relative w-16 h-16 rounded overflow-hidden border border-stone-200 bg-stone-50 flex items-center justify-center">
                             <img src={url} alt={`Gallery Preview ${idx + 1}`} className="max-h-full max-w-full object-contain" />
@@ -995,6 +1181,36 @@ export default function AdminConsole() {
                       </button>
                     </div>
                   ))}
+                </div>
+
+                {/* PDF Datasheet field */}
+                <div className="sm:col-span-2 space-y-2">
+                  <label className="block text-[10px] font-bold uppercase tracking-wider text-stone-500">
+                    Product PDF Datasheet (Cloudinary URL)
+                  </label>
+                  <div className="flex gap-2">
+                    <input
+                      type="url"
+                      value={productForm.pdfUrl}
+                      onChange={(e) => setProductForm({ ...productForm, pdfUrl: e.target.value })}
+                      className="w-full text-xs px-4 py-2.5 bg-stone-50 border border-stone-200 rounded-lg focus:outline-none focus:border-brand-orange/50"
+                      placeholder="https://res.cloudinary.com/..."
+                    />
+                    <button
+                      type="button"
+                      onClick={() => handlePdfUpload((url) => setProductForm({ ...productForm, pdfUrl: url }))}
+                      className="px-4 py-2 bg-stone-100 hover:bg-stone-200 border border-stone-250 text-stone-700 text-xs font-bold uppercase tracking-wider rounded-lg transition-colors flex items-center gap-1.5 shrink-0"
+                    >
+                      <FileText className="w-4 h-4 text-brand-orange" />
+                      Upload PDF
+                    </button>
+                  </div>
+                  {productForm.pdfUrl && (
+                    <div className="text-[10px] font-semibold text-emerald-600 flex items-center gap-1">
+                      <Check className="w-3.5 h-3.5" />
+                      PDF Attached: <a href={productForm.pdfUrl} target="_blank" rel="noreferrer" className="underline font-bold text-brand-orange">{productForm.pdfUrl}</a>
+                    </div>
+                  )}
                 </div>
 
                 <div className="sm:col-span-2">
@@ -1056,6 +1272,7 @@ export default function AdminConsole() {
           </div>
         </div>
       )}
+      <Script src="https://upload-widget.cloudinary.com/global/all.js" strategy="lazyOnload" />
     </div>
   );
 }

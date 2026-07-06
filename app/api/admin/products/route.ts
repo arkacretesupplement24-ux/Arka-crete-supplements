@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { db } from "@/lib/db/client";
-import { products, auditLogs } from "@/lib/db/schema";
+import { products, auditLogs, productDocuments } from "@/lib/db/schema";
 import { eq, desc } from "drizzle-orm";
 import { verifyAdminSession } from "@/lib/auth/session";
 
@@ -16,7 +16,17 @@ export async function GET(request: Request) {
       .from(products)
       .orderBy(products.sortOrder, desc(products.createdAt));
 
-    return NextResponse.json({ success: true, products: list });
+    const docs = await db.select().from(productDocuments);
+
+    const productsWithDocs = list.map((prod) => {
+      const doc = docs.find((d) => d.productId === prod.id);
+      return {
+        ...prod,
+        pdfUrl: doc ? doc.fileUrl : null,
+      };
+    });
+
+    return NextResponse.json({ success: true, products: productsWithDocs });
   } catch (error) {
     console.error("GET Products Error:", error);
     return NextResponse.json({ success: false, error: "Failed to fetch products" }, { status: 500 });
@@ -52,6 +62,7 @@ export async function POST(request: Request) {
       galleryImagesJson,
       price,
       sortOrder,
+      pdfUrl,
     } = body;
 
     if (!categoryId || !name || !slug) {
@@ -88,6 +99,18 @@ export async function POST(request: Request) {
 
     await db.insert(products).values(newProduct);
 
+    if (pdfUrl) {
+      const docId = `doc-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+      await db.insert(productDocuments).values({
+        id: docId,
+        productId: id,
+        title: "Technical Datasheet",
+        fileUrl: pdfUrl,
+        fileType: "pdf",
+        sortOrder: 0,
+      });
+    }
+
     // Audit Logging
     const logId = `log-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
     await db.insert(auditLogs).values({
@@ -118,7 +141,7 @@ export async function PATCH(request: Request) {
 
   try {
     const body = await request.json();
-    const { id, ...updates } = body;
+    const { id, pdfUrl, features, benefits, specs, ...updates } = body;
 
     if (!id) {
       return NextResponse.json({ success: false, error: "Product ID is required" }, { status: 400 });
@@ -144,6 +167,38 @@ export async function PATCH(request: Request) {
     };
 
     await db.update(products).set(updatedProduct).where(eq(products.id, id));
+
+    if (pdfUrl !== undefined) {
+      const existingResult = await db
+        .select()
+        .from(productDocuments)
+        .where(eq(productDocuments.productId, id))
+        .limit(1);
+      const existing = existingResult[0];
+
+      if (pdfUrl) {
+        if (existing) {
+          await db
+            .update(productDocuments)
+            .set({ fileUrl: pdfUrl })
+            .where(eq(productDocuments.id, existing.id));
+        } else {
+          const docId = `doc-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+          await db.insert(productDocuments).values({
+            id: docId,
+            productId: id,
+            title: "Technical Datasheet",
+            fileUrl: pdfUrl,
+            fileType: "pdf",
+            sortOrder: 0,
+          });
+        }
+      } else {
+        if (existing) {
+          await db.delete(productDocuments).where(eq(productDocuments.id, existing.id));
+        }
+      }
+    }
 
     // Audit Logging
     const logId = `log-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
@@ -188,6 +243,9 @@ export async function DELETE(request: Request) {
     if (!before) {
       return NextResponse.json({ success: false, error: "Product not found" }, { status: 404 });
     }
+
+    // Delete associated documents first
+    await db.delete(productDocuments).where(eq(productDocuments.productId, id));
 
     // Hard delete of the product row
     await db.delete(products).where(eq(products.id, id));
