@@ -34,6 +34,14 @@ interface ProductDetailProps {
   }>;
 }
 
+const getAttachmentUrl = (url: string | null | undefined): string => {
+  if (!url) return "";
+  if (url.includes("cloudinary.com") && url.includes("/upload/") && !url.includes("fl_attachment")) {
+    return url.replace("/upload/", "/upload/fl_attachment/");
+  }
+  return url;
+};
+
 export default function ProductDetail({ product, relatedProducts }: ProductDetailProps) {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -218,9 +226,7 @@ export default function ProductDetail({ product, relatedProducts }: ProductDetai
                 </div>
 
                 <a
-                  href={product.pdfUrl || "/ARKA CRETE_BROCHURE.pdf"}
-                  target={product.pdfUrl ? "_blank" : undefined}
-                  rel={product.pdfUrl ? "noreferrer" : undefined}
+                  href={product.pdfUrl ? getAttachmentUrl(product.pdfUrl) : "/ARKA CRETE_BROCHURE.pdf"}
                   download={`${product.name.replace(/\s+/g, "_")}_Datasheet.pdf`}
                   className="inline-flex items-center justify-center p-2.5 bg-brand-orange hover:bg-brand-orange/90 text-white rounded-lg transition-colors shadow-sm"
                   title="Download PDF"

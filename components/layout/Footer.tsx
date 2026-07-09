@@ -6,6 +6,14 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { MapPin, Phone, Mail, FileText, ArrowRight } from "lucide-react";
 
+const getAttachmentUrl = (url: string | null | undefined): string => {
+  if (!url) return "";
+  if (url.includes("cloudinary.com") && url.includes("/upload/") && !url.includes("fl_attachment")) {
+    return url.replace("/upload/", "/upload/fl_attachment/");
+  }
+  return url;
+};
+
 export default function Footer() {
   const pathname = usePathname();
   const [brochureUrl, setBrochureUrl] = React.useState("/ARKA CRETE_BROCHURE.pdf");
@@ -127,9 +135,7 @@ export default function Footer() {
           </p>
           <div className="pt-2">
             <a
-              href={brochureUrl}
-              target={brochureUrl !== "/ARKA CRETE_BROCHURE.pdf" ? "_blank" : undefined}
-              rel={brochureUrl !== "/ARKA CRETE_BROCHURE.pdf" ? "noreferrer" : undefined}
+              href={brochureUrl ? getAttachmentUrl(brochureUrl) : "/ARKA CRETE_BROCHURE.pdf"}
               download="ARKA_CRETE_Brochure.pdf"
               className="inline-flex items-center gap-1.5 text-xs text-brand-orange hover:text-white font-bold tracking-wider uppercase"
             >

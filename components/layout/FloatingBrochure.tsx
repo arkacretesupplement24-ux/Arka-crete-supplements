@@ -3,6 +3,14 @@
 import React from "react";
 import { Download } from "lucide-react";
 
+const getAttachmentUrl = (url: string | null | undefined): string => {
+  if (!url) return "";
+  if (url.includes("cloudinary.com") && url.includes("/upload/") && !url.includes("fl_attachment")) {
+    return url.replace("/upload/", "/upload/fl_attachment/");
+  }
+  return url;
+};
+
 export default function FloatingBrochure() {
   const [brochureUrl, setBrochureUrl] = React.useState("/ARKA CRETE_BROCHURE.pdf");
 
@@ -37,9 +45,7 @@ export default function FloatingBrochure() {
 
       <div className="fixed bottom-6 left-6 z-[49] pointer-events-none">
         <a
-          href={brochureUrl}
-          target={brochureUrl !== "/ARKA CRETE_BROCHURE.pdf" ? "_blank" : undefined}
-          rel={brochureUrl !== "/ARKA CRETE_BROCHURE.pdf" ? "noreferrer" : undefined}
+          href={brochureUrl ? getAttachmentUrl(brochureUrl) : "/ARKA CRETE_BROCHURE.pdf"}
           download="ARKA_CRETE_Brochure.pdf"
           className="animate-brochure-breath group flex items-center gap-2 bg-brand-orange hover:bg-brand-orange/95 text-white text-xs font-bold uppercase tracking-wider px-4 py-3 rounded-full shadow-xl active:scale-95 transition-all duration-300 pointer-events-auto border border-white/10"
           title="Download Technical Brochure"
