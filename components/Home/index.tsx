@@ -28,37 +28,37 @@ export default function Home() {
 
   const featuredProducts: FeaturedProduct[] = [
     {
-      name: "Tile Grip Premium",
-      slug: "tile-grip-premium",
+      name: "ARKA TILE GRIP PREMIUM",
+      slug: "arka-tile-grip-premium",
       category: "Tile Adhesives",
-      description: "High performance polymer modified tile adhesive for large vitrified tiles, granite, and marble.",
+      description: "High-performance polymer-modified cementitious tile adhesive for ceramic, vitrified, porcelain and natural stone tiles.",
       packaging: "20 Kg bag",
       coverage: "Approx. 45-55 sq. ft. per bag",
       image: "https://res.cloudinary.com/dmohmgbut/image/upload/q_auto/f_auto/v1781852144/2._Tile_Grip_Premium_ranlb2.png"
     },
     {
-      name: "Block Fix",
-      slug: "block-fix",
+      name: "ARKA BLOCKFIX",
+      slug: "arka-blockfix",
       category: "Block Joining",
-      description: "High strength polymer modified thin-bed mortar for AAC blocks. Replaces conventional site mortar.",
+      description: "Premium polymer-modified cement-based block jointing mortar for AAC, CLC, fly ash and concrete blocks.",
       packaging: "40 Kg bag",
       coverage: "Approx. 120-140 sq. ft. per bag",
       image: "https://res.cloudinary.com/dmohmgbut/image/upload/q_auto/f_auto/v1781850504/BLOCK_FIX_ycpmsh.png"
     },
     {
-      name: "EP Epoxy Grout",
-      slug: "ep-epoxy-grout",
+      name: "ARKA EP Epoxy Grout",
+      slug: "arka-ep-epoxy-grout",
       category: "Grouts & Anchoring",
-      description: "Stain-free, water-resistant three-component epoxy grout for pools, kitchens, and labs.",
+      description: "Premium, high-performance three-component epoxy-based tile joint filling system.",
       packaging: "5 Kg kit",
       coverage: "Varies by joint sizing",
       image: "https://res.cloudinary.com/dmohmgbut/image/upload/q_auto/f_auto/v1781852247/ARKAGUARD_WPL_x9zp5o.png" // placeholder for grout
     },
     {
-      name: "Arkacoat FX",
-      slug: "arkacoat-fx",
+      name: "ARKA COAT FX",
+      slug: "arka-coat-fx",
       category: "Waterproofing",
-      description: "Two-component flexible acrylic-polymer modified waterproofing slurry for bathrooms & tanks.",
+      description: "Premium two-component flexible waterproofing system engineered to protect concrete and masonry structures.",
       packaging: "20 Kg kit",
       coverage: "Approx. 120-140 sq. ft. per kit",
       image: "https://res.cloudinary.com/dmohmgbut/image/upload/q_auto/f_auto/v1781852247/ARKAGUARD_WPL_x9zp5o.png"
@@ -75,7 +75,7 @@ export default function Home() {
         unit: "Bags",
         quantity: bags,
         pkgSize: "20 Kg",
-        productName: "Tile Grip (Classic/Premium)"
+        productName: "ARKA TILE GRIP (Classic/Premium)"
       };
     } else if (calcType === "block") {
       // 40kg bag covers ~130 sq ft at 100mm, ~100 sq ft at 150mm, and ~75 sq ft at 200mm wall thickness
@@ -87,7 +87,7 @@ export default function Home() {
         unit: "Bags",
         quantity: bags,
         pkgSize: "40 Kg",
-        productName: "Block Fix Mortar"
+        productName: "ARKA BLOCKFIX Mortar"
       };
     } else {
       // 20kg kit covers ~130 sq ft in 2 coats, ~260 sq ft in 1 coat
@@ -97,7 +97,7 @@ export default function Home() {
         unit: "Kits",
         quantity: kits,
         pkgSize: "20 Kg",
-        productName: "Arkacoat FX Waterproofing"
+        productName: "ARKA COAT FX Waterproofing"
       };
     }
   };
