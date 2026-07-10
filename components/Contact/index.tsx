@@ -38,6 +38,16 @@ export default function Contact() {
 
       const data = await res.json();
       if (data.success) {
+        // Construct WhatsApp message with user inputs before resetting state
+        const whatsappText = `*New Website Inquiry*\n\n` +
+          `*Name:* ${formData.fullName}\n` +
+          `*Email:* ${formData.email || "N/A"}\n` +
+          `*Phone:* ${formData.phone}\n` +
+          `*Company:* ${formData.companyName || "N/A"}\n` +
+          `*Location:* ${formData.city || "N/A"}, ${formData.state || "N/A"}\n` +
+          `*Type:* ${formData.inquiryType === "dealer" ? "Dealer / Distributor" : "General"}\n` +
+          `*Message:* ${formData.message || "N/A"}`;
+
         setFormSubmitted(true);
         setFormData({
           fullName: "",
@@ -49,6 +59,10 @@ export default function Contact() {
           inquiryType: "general",
           message: "",
         });
+
+        // Redirect to WhatsApp
+        const encodedText = encodeURIComponent(whatsappText);
+        window.location.href = `https://wa.me/919030024111?text=${encodedText}`;
       } else {
         alert(data.error || "Inquiry submission failed.");
       }
