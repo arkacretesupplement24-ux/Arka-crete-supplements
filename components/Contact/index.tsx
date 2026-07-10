@@ -20,6 +20,9 @@ export default function Contact() {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+    if (formSubmitted) {
+      setFormSubmitted(false);
+    }
   };
 
   const handleFormSubmit = async (e: React.FormEvent) => {
@@ -168,13 +171,14 @@ export default function Contact() {
               Corporate Inquiry Form
             </h3>
 
-            {formSubmitted ? (
-              <div className="p-6 rounded-xl border border-emerald-500/20 bg-emerald-500/10 text-emerald-600 text-xs text-center space-y-2">
+            {formSubmitted && (
+              <div className="p-4 rounded-xl border border-emerald-500/20 bg-emerald-500/10 text-emerald-600 text-xs text-center space-y-1">
                 <p className="font-bold">Inquiry Sent Successfully!</p>
                 <p className="opacity-95">Our construction chemicals sales executive will follow up with you shortly.</p>
               </div>
-            ) : (
-              <form onSubmit={handleFormSubmit} className="grid gap-4 sm:grid-cols-2">
+            )}
+
+            <form onSubmit={handleFormSubmit} className="grid gap-4 sm:grid-cols-2">
                 <div className="sm:col-span-2">
                   <label htmlFor="inquiryType" className="block text-[10px] font-bold uppercase tracking-wider text-stone-500 mb-1">Inquiry Type</label>
                   <select
@@ -287,7 +291,6 @@ export default function Contact() {
                   </button>
                 </div>
               </form>
-            )}
           </div>
         </div>
       </section>
