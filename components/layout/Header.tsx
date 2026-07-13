@@ -73,7 +73,7 @@ export default function Header() {
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-12">
           <Link href="/" className="flex items-center select-none py-0.5">
             <Image
-              src="/ARKA logo.png"
+              src="/arka-logo.png"
               alt="ARKA CRETE"
               width={220}
               height={66}

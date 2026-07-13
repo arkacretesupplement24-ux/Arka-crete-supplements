@@ -254,7 +254,7 @@ export default function SplashScreen() {
                 className="relative w-[200px] h-[200px] sm:w-[240px] sm:h-[240px] md:w-[380px] md:h-[180px]"
               >
                 <Image
-                  src="/ARKA logo.png"
+                  src="/arka-logo.png"
                   alt="ARKA CRETE"
                   fill
                   priority
