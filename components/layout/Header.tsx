@@ -20,6 +20,11 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    setIsOpen(false);
+    setIsScrolled(false);
+  }, [pathname]);
+
   const categories = [
     { name: "Tile Adhesives", slug: "tile-adhesives" },
     { name: "Block Joining", slug: "block-joining" },
