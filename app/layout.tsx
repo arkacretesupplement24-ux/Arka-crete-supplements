@@ -27,6 +27,9 @@ const zenDots = Zen_Dots({
 export const metadata: Metadata = {
   title: "ARKA CRETE | Premium Architectural Design & Innovation",
   description: "ARKA crafts next-generation spaces where luxury meets sustainability. Explore our architectural masterpieces and design innovations.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
