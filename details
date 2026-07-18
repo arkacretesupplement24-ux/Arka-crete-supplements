@@ -1,0 +1,2160 @@
+Arka Crete Supplements LLP
++91 9030024111
+
+Office Address:
+
+ H NO 5-4-159, PLOT NO 26, KAMALA NAGAR, VANASTHALI PURAM, Hyderabad,Telangana
+- 500070
+
+Factory Address: 
+
+Plot No - 96,TIF MSME Green Industrial Park, Dandu Malkapur,Choutuppal, Yadadri Bhuvanagiri-508252
+
+
+
+###prompt
+
+Below is a full website blueprint for **ARKA CRETE SUPPLEMENTS LLP**, built from your logo, brochure, product catalog, and brand language. The brochure shows Arka Crete as a Hyderabad-based construction-chemicals company focused on tile adhesives, grouts, block joining mortar, waterproofing, repair mortars, bonding agents, and upcoming epoxy systems. It also includes the official contact details and the brand line “Your Strength, Our Priority” / “Innovation at Work. Excellence in Every Structure.”   
+
+# 1) Project Overview
+
+## Website purpose
+
+A premium corporate website that presents ARKA CRETE as a trusted construction chemical manufacturer, educates builders/contractors/distributors, showcases the product range, and converts visitors into inquiries.
+
+## Business goals
+
+* Build brand trust and authority in construction chemicals.
+* Generate leads from contractors, builders, dealers, architects, and project managers.
+* Clearly present product categories, applications, packaging, and benefits.
+* Support future expansion into epoxy systems, certifications, and technical downloads.
+* Make the company easy to contact for sales and partnerships.
+
+## User goals
+
+* Quickly understand what ARKA CRETE manufactures.
+* Find the right product by use case: tile fixing, waterproofing, repair, grouting, anchoring.
+* View product benefits, coverage, packaging, and recommended applications.
+* Contact the company with minimal friction.
+* Download brochures/data sheets in the future.
+
+## Key value proposition
+
+**“Construction chemical solutions engineered for strength, durability, ease of application, and long-term performance.”**
+This is strongly supported by the brochure’s repeated focus on high-performance formulations, rigorous testing, R&D, durability, and structural protection.
+
+---
+
+# 2) Complete Feature List
+
+## Core features
+
+* Home page with hero, brand story, and product highlights
+* Products catalog with category filtering
+* Individual product detail pages
+* About Us page
+* Infrastructure page
+* Contact page with form + map
+* Download brochure / technical sheets
+* Inquiry CTA on every page
+* Search across products
+* WhatsApp / phone quick contact
+
+## Admin features
+
+* Secure admin login
+* Manage products, categories, and variants
+* Manage homepage banners and featured products
+* Manage inquiry leads
+* Upload brochures and images
+* Edit SEO metadata for each page
+* Publish/unpublish content
+* Manage FAQ and testimonials
+* Manage contact details and office/factory info
+
+## User features
+
+* Browse by product category
+* View product application, packaging, coverage, and benefits
+* Compare products in the same category
+* Submit inquiry by product
+* Download brochure
+* Use contact form or click-to-call / click-to-WhatsApp
+* Mobile-friendly navigation
+
+## Future scalability features
+
+* Dealer/distributor portal
+* Product comparison tool
+* Technical data sheet library
+* Certification management
+* Multi-language support
+* Blog / knowledge center
+* Project gallery / case studies
+* Lead assignment workflow
+* CRM integration
+* WhatsApp automation
+* E-commerce for sample packs or direct sales, if ever needed
+
+---
+
+# 3) User Roles & Permissions
+
+## Roles
+
+| Role            | Access                                                        |
+| --------------- | ------------------------------------------------------------- |
+| Guest           | View public site, submit inquiry                              |
+| Lead / Customer | Same as guest, plus saved inquiries if account is added later |
+| Sales Manager   | View and manage inquiries                                     |
+| Content Editor  | Manage pages, banners, product content                        |
+| Product Manager | Manage products, categories, documents                        |
+| Admin           | Full access                                                   |
+| Super Admin     | Full system access, role management, settings                 |
+
+## Permission model
+
+### Guest
+
+* Read public pages
+* Download public brochure
+* Submit inquiry
+
+### Sales Manager
+
+* View leads/inquiries
+* Update lead status
+* Add notes
+* Export inquiries
+
+### Content Editor
+
+* Edit static pages
+* Update SEO metadata
+* Manage homepage sections
+* Upload images and files
+
+### Product Manager
+
+* CRUD products
+* CRUD categories
+* Add application/use-case data
+* Add packaging, coverage, technical details
+* Upload product images and TDS files
+
+### Admin / Super Admin
+
+* Everything above
+* User management
+* Role and permission management
+* Audit logs
+* Site settings
+* Enforce approvals / publishing workflow
+
+## Access control requirements
+
+* RBAC-based authorization
+* Route protection for admin pages
+* Fine-grained permissions for content, leads, products, and settings
+* Audit trail for every create/update/delete action
+* Optional approval workflow before publishing product changes
+
+---
+
+# 4) Information Architecture
+
+## Complete sitemap
+
+### Public
+
+* Home
+* About Us
+* Products
+
+  * Tile Adhesives
+
+    * Tile Grip Classic
+    * Tile Grip Premium
+    * Tile Fix 720
+  * Block Joining
+
+    * Block Fix
+  * Grouts & Anchoring
+
+    * Tile Grout 721
+    * EP Epoxy Grout
+    * Free Grout 50
+    * Free Grout 70
+    * Polygrout
+    * Expacem 225
+  * Repair Products
+
+    * Microcrete
+    * Rep 111
+  * Waterproofing
+
+    * Arkacoat FX
+    * Arkaguard IWPL
+    * Arkabond SBR
+* Infrastructure
+* Quality / R&D
+* Downloads
+* Contact Us
+* Privacy Policy
+* Terms & Conditions
+
+### Admin
+
+* Dashboard
+* Products
+* Categories
+* Pages
+* Banners
+* Media Library
+* Inquiries
+* SEO Manager
+* Users & Roles
+* Settings
+* Audit Logs
+
+## Navigation structure
+
+Top nav:
+
+* Home
+* About
+* Products
+* Infrastructure
+* Downloads
+* Contact
+
+Primary CTA:
+
+* “Get a Quote” or “Send Inquiry”
+
+Footer nav:
+
+* About
+* Products
+* Contact
+* Privacy
+* Terms
+* Social/contact details
+
+## User flows
+
+### Flow 1: Explore product
+
+Home → Products → Category → Product detail → Inquiry form
+
+### Flow 2: Contact sales
+
+Any page → CTA button → Contact form / WhatsApp / Call
+
+### Flow 3: Download brochure
+
+Home/About/Downloads → brochure list → PDF download
+
+### Flow 4: Dealer inquiry
+
+Home → Contact → Dealer inquiry form → confirmation
+
+---
+
+# 5) Page-by-Page Breakdown
+
+## 5.1 Home
+
+**Purpose:** First impression, trust building, lead generation.
+
+**Sections**
+
+* Hero banner
+* Brand promise
+* Product categories
+* Featured products
+* Why ARKA CRETE
+* Infrastructure preview
+* Applications / industries served
+* Contact CTA
+
+**Components**
+
+* Hero image/video
+* CTA buttons
+* Category cards
+* Product cards
+* Stats strip
+* Logo strip / trust indicators
+* Testimonial placeholder
+* Contact CTA panel
+
+**Forms**
+
+* Quick inquiry widget optional
+
+**API requirements**
+
+* GET featured products
+* GET homepage sections
+* POST quick inquiry
+
+**SEO requirements**
+
+* Title: “ARKA CRETE Supplements LLP | Construction Chemical Solutions”
+* H1 only one
+* Schema: Organization, Website, Product
+* Optimized meta description and Open Graph
+
+---
+
+## 5.2 About Us
+
+**Purpose:** Explain who the company is and why it is credible.
+
+**Sections**
+
+* Company story
+* Mission / vision
+* R&D philosophy
+* Quality commitment
+* Leadership / management note
+* Location summary
+
+**Components**
+
+* Text blocks
+* Image cards
+* Timeline / values grid
+
+**API**
+
+* GET about content
+
+**SEO**
+
+* Target keywords: construction chemical manufacturer, tile adhesive supplier, waterproofing solutions
+* Schema: Organization
+
+---
+
+## 5.3 Products listing
+
+**Purpose:** Allow users to browse products by category.
+
+**Sections**
+
+* Category tabs / filters
+* Product grid
+* Search bar
+* Sort by use case
+
+**Components**
+
+* Filter chips
+* Product cards
+* Pagination / infinite scroll
+
+**API**
+
+* GET products
+* GET categories
+* GET search results
+
+**SEO**
+
+* Indexable category pages
+* Canonical URLs
+* Internal linking to product detail pages
+
+---
+
+## 5.4 Product detail page
+
+**Purpose:** Convert technical interest into inquiry.
+
+**Sections**
+
+* Product hero
+* Product description
+* Recommended applications
+* Features & benefits
+* Coverage
+* Packaging
+* Technical specs
+* Downloads
+* Related products
+* CTA
+
+**Components**
+
+* Spec table
+* Image gallery
+* PDF download button
+* Inquiry form
+* Related product cards
+
+**API**
+
+* GET product by slug
+* GET related products
+* POST inquiry
+* GET downloads
+
+**SEO**
+
+* Unique title/meta per product
+* Product schema
+* FAQ schema if FAQ added later
+* Clean slug URLs
+
+---
+
+## 5.5 Infrastructure
+
+**Purpose:** Prove manufacturing strength and capability.
+
+**Sections**
+
+* Factory overview
+* Lab / testing infrastructure
+* Production equipment
+* Quality control
+* Facility images
+
+**Components**
+
+* Image grid
+* Feature cards
+* Captions
+
+**API**
+
+* GET infrastructure content
+* GET media assets
+
+**SEO**
+
+* Schema: Organization / LocalBusiness
+* Image alt text describing facility
+
+The brochure includes an infrastructure page showing the factory and testing setup, which supports this section well. 
+
+---
+
+## 5.6 Downloads
+
+**Purpose:** Provide brochures and technical resources.
+
+**Sections**
+
+* Company brochure
+* Product brochures
+* Technical data sheets
+* Certifications
+
+**Components**
+
+* Download cards
+* File metadata
+* File preview thumbnails
+
+**API**
+
+* GET documents
+* POST file access tracking if needed
+
+**SEO**
+
+* Noindex internal documents if required
+* Downloadable file metadata
+
+---
+
+## 5.7 Contact Us
+
+**Purpose:** Capture leads.
+
+**Sections**
+
+* Contact form
+* Office address
+* Factory address
+* Phone
+* Email
+* Google map
+* WhatsApp CTA
+
+The brochure provides the Hyderabad office, factory address, phone number, email, and website, so these should be surfaced directly on this page. 
+
+**Components**
+
+* Form
+* Map embed
+* Contact cards
+
+**API**
+
+* POST contact inquiry
+* POST dealer inquiry
+* POST callback request
+
+**SEO**
+
+* Local SEO
+* LocalBusiness schema
+* NAP consistency
+
+---
+
+## 5.8 Privacy Policy / Terms
+
+**Purpose:** Legal compliance and trust.
+
+**Sections**
+
+* Data collection
+* Form submission rules
+* Cookie use
+* Intellectual property
+* Disclaimer
+
+**API**
+
+* None
+
+**SEO**
+
+* noindex if preferred
+
+---
+
+## 5.9 Admin dashboard pages
+
+* Dashboard
+* Products
+* Categories
+* Pages
+* Media
+* Inquiries
+* SEO
+* Users
+* Roles
+* Settings
+* Audit Logs
+
+---
+
+# 6) UI/UX Design System
+
+## Design style recommendation
+
+**Industrial premium corporate**
+
+* Bold, structured, clean
+* Construction-inspired grid
+* Strong orange accents from logo
+* White space balanced with powerful imagery
+* Trust-first layout
+
+## Color palette
+
+Based on your logo:
+
+* Primary Orange: **#F5820A**
+* Secondary Brown: **#6B3200**
+* Deep Accent: **#230022**
+* Neutral Light Gray: **#E5E5E5**
+* Background White: **#FFFFFF**
+* Text Charcoal: **#222222**
+
+Suggested roles:
+
+* Primary CTA: Orange
+* Secondary CTA: Brown
+* Dark sections: Deep accent
+* Cards/backgrounds: White / light gray
+
+## Typography
+
+* Headings: **Poppins / Sora / Inter**
+* Body: **Inter**
+* Use bold headings, readable body text, large line-height
+* Technical info tables should use a clean sans-serif
+
+## Component library
+
+* Navbar
+* Hero section
+* CTA buttons
+* Product cards
+* Category filters
+* Accordion / FAQ
+* Spec tables
+* Contact form
+* Sidebar filters
+* Breadcrumbs
+* Footer
+* Modal for downloads / inquiries
+* Toast notifications
+* Admin data tables
+* Drawer / off-canvas mobile menu
+
+## Responsive behavior
+
+* Mobile-first
+* Sticky CTA on mobile
+* Collapsible nav
+* Product cards stack on small screens
+* Tables become cards on mobile
+* Image grids become carousels on phone
+
+## Accessibility requirements
+
+* WCAG 2.1 AA target
+* Strong color contrast
+* Keyboard navigation
+* Visible focus states
+* Alt text for all meaningful images
+* Form labels and error messages
+* Semantic HTML landmarks
+* Avoid text over busy images without overlays
+
+---
+
+# 7) Database Architecture
+
+Using **Turso + Drizzle ORM**
+
+## Main tables
+
+### 1. users
+
+* id
+* name
+* email
+* password_hash
+* role_id
+* is_active
+* last_login_at
+* created_at
+* updated_at
+* deleted_at
+
+### 2. roles
+
+* id
+* name
+* description
+* created_at
+* updated_at
+
+### 3. permissions
+
+* id
+* key
+* description
+
+### 4. role_permissions
+
+* role_id
+* permission_id
+
+### 5. categories
+
+* id
+* name
+* slug
+* description
+* sort_order
+* is_active
+* created_at
+* updated_at
+
+### 6. products
+
+* id
+* category_id
+* name
+* slug
+* short_description
+* long_description
+* packaging
+* coverage
+* application_type
+* product_type
+* features_json
+* benefits_json
+* specs_json
+* is_featured
+* is_active
+* seo_title
+* seo_description
+* created_at
+* updated_at
+* deleted_at
+
+### 7. product_images
+
+* id
+* product_id
+* image_url
+* alt_text
+* sort_order
+
+### 8. product_documents
+
+* id
+* product_id
+* title
+* file_url
+* file_type
+* sort_order
+
+### 9. pages
+
+* id
+* slug
+* title
+* content
+* seo_title
+* seo_description
+* is_published
+* created_at
+* updated_at
+
+### 10. inquiries
+
+* id
+* full_name
+* email
+* phone
+* company_name
+* city
+* state
+* product_id nullable
+* inquiry_type
+* message
+* status
+* source
+* created_at
+* updated_at
+
+### 11. media_assets
+
+* id
+* file_name
+* file_url
+* file_type
+* alt_text
+* uploaded_by
+* created_at
+
+### 12. settings
+
+* id
+* key
+* value_json
+* updated_at
+
+### 13. audit_logs
+
+* id
+* actor_user_id
+* action
+* entity_type
+* entity_id
+* before_json
+* after_json
+* ip_address
+* user_agent
+* created_at
+
+## Relationships
+
+* roles → users
+* roles ↔ permissions
+* categories → products
+* products → product_images
+* products → product_documents
+* products → inquiries optional
+* users → audit_logs
+* users → media_assets uploaded_by
+
+## Indexes
+
+* users.email unique
+* roles.name unique
+* permissions.key unique
+* categories.slug unique
+* products.slug unique
+* products.category_id
+* inquiries.status + created_at
+* inquiries.product_id
+* audit_logs.actor_user_id + created_at
+
+## Constraints
+
+* Required slugs
+* Unique email
+* Foreign keys with cascade/restrict rules
+* Enum-like status fields
+* JSON schema validation at application layer
+* Soft deletes for content entities
+
+## Audit fields
+
+Standard on most tables:
+
+* created_at
+* updated_at
+* deleted_at where relevant
+* created_by / updated_by optional on admin-managed content
+
+---
+
+# 8) API Architecture
+
+## Route structure
+
+### Public
+
+* `GET /api/products`
+* `GET /api/products/:slug`
+* `GET /api/categories`
+* `GET /api/pages/:slug`
+* `GET /api/settings/public`
+* `POST /api/inquiries`
+* `POST /api/contact`
+
+### Admin
+
+* `POST /api/auth/login`
+* `POST /api/auth/logout`
+* `GET /api/auth/me`
+* `GET /api/admin/dashboard`
+* `POST /api/admin/products`
+* `PATCH /api/admin/products/:id`
+* `DELETE /api/admin/products/:id`
+* `POST /api/admin/media`
+* `GET /api/admin/inquiries`
+* `PATCH /api/admin/inquiries/:id`
+* `POST /api/admin/pages`
+* `PATCH /api/admin/pages/:id`
+* `PATCH /api/admin/settings`
+
+## Request/response format
+
+Use JSON:
+
+```json
+{
+  "success": true,
+  "data": {},
+  "message": ""
+}
+```
+
+Error format:
+
+```json
+{
+  "success": false,
+  "error": {
+    "code": "VALIDATION_ERROR",
+    "message": "Invalid input",
+    "details": []
+  }
+}
+```
+
+## Validation rules
+
+* Email must be valid
+* Phone number format validation
+* Slug unique and lowercase
+* Required product fields before publish
+* File type restrictions on uploads
+* Max image/file size rules
+* Sanitized rich text inputs
+
+## Error handling
+
+* 400 validation errors
+* 401 unauthenticated
+* 403 unauthorized
+* 404 not found
+* 409 conflict
+* 500 server error
+* Centralized error middleware / route handlers
+* Friendly error messages for public forms
+
+---
+
+# 9) Folder Structure
+
+For **Next.js 16 App Router + TypeScript + Tailwind CSS v4 + Zustand + TanStack React Query + Turso + Drizzle ORM**
+
+```txt
+src/
+  app/
+    (public)/
+      page.tsx
+      about/page.tsx
+      products/page.tsx
+      products/[slug]/page.tsx
+      products/category/[slug]/page.tsx
+      infrastructure/page.tsx
+      downloads/page.tsx
+      contact/page.tsx
+      privacy-policy/page.tsx
+      terms/page.tsx
+    (admin)/
+      admin/page.tsx
+      admin/login/page.tsx
+      admin/products/page.tsx
+      admin/products/new/page.tsx
+      admin/products/[id]/page.tsx
+      admin/categories/page.tsx
+      admin/pages/page.tsx
+      admin/inquiries/page.tsx
+      admin/media/page.tsx
+      admin/settings/page.tsx
+      admin/users/page.tsx
+      admin/audit-logs/page.tsx
+    api/
+      auth/
+      products/
+      categories/
+      pages/
+      inquiries/
+      contact/
+      admin/
+  components/
+    ui/
+    layout/
+    sections/
+    products/
+    forms/
+    admin/
+  lib/
+    db/
+      client.ts
+      schema.ts
+      queries/
+    auth/
+      jwt.ts
+      permissions.ts
+      session.ts
+    api/
+      response.ts
+      errors.ts
+      validation.ts
+    seo/
+      metadata.ts
+    utils/
+      slug.ts
+      format.ts
+  hooks/
+  store/
+  types/
+  styles/
+  assets/
+```
+
+Recommended supporting folders:
+
+* `middleware.ts`
+* `drizzle.config.ts`
+* `env.ts`
+* `public/uploads/`
+
+---
+
+# 10) Performance & SEO Strategy
+
+## Technical SEO
+
+* Server-render key pages
+* Clean semantic HTML
+* Descriptive slugs
+* Internal linking across categories/products
+* XML sitemap
+* robots.txt
+* canonical tags
+* Open Graph and Twitter metadata
+
+## Metadata
+
+Each page should have:
+
+* title
+* description
+* keywords only where useful
+* OG title/description/image
+* Twitter card
+* canonical URL
+
+## Structured data
+
+* Organization
+* LocalBusiness
+* Product
+* BreadcrumbList
+* FAQPage
+* WebSite search schema
+
+## Caching
+
+* Static generation for content pages
+* Revalidation for products and pages
+* CDN caching for images and PDFs
+* API caching for public catalog endpoints
+* Avoid overfetching on product grids
+
+## Image optimization
+
+* Use next/image
+* WebP/AVIF
+* Proper dimensions
+* Lazy loading below the fold
+* Blur placeholders for hero images
+* Compressed brochure thumbnails
+
+---
+
+# 11) Security Requirements
+
+## Authentication
+
+* Secure admin login
+* Password hashing with Argon2 or bcrypt
+* Session-based auth or JWT with refresh strategy
+* HttpOnly cookies for tokens
+
+## Authorization
+
+* Role-based access control
+* Permission checks on every protected route
+* Middleware route guards for admin
+
+## JWT strategy
+
+Recommended:
+
+* Short-lived access token
+* Refresh token in secure cookie
+* Token rotation on refresh
+* Server-side revocation support if needed
+
+## Input validation
+
+* Zod schemas for every form and API route
+* Sanitize all rich text and file inputs
+* Prevent SQL injection through ORM
+* File type and size validation
+
+## Rate limiting
+
+* Contact/inquiry endpoint limits
+* Login attempt throttling
+* File upload rate control
+* IP-based abuse protection
+
+## Environment variable handling
+
+* Keep secrets server-side only
+* Validate env on boot
+* Separate dev/staging/prod env files
+* Never expose DB or auth secrets to client bundles
+
+---
+
+# 12) Development Roadmap
+
+## Phase 1 — MVP
+
+* Brand theme setup
+* Public home page
+* About page
+* Products listing
+* Product detail pages
+* Contact page
+* Inquiry form
+* Admin login
+* Basic product CMS
+* Basic SEO setup
+* Turso + Drizzle schema
+* Mobile responsiveness
+
+## Phase 2
+
+* Downloads library
+* Infrastructure page
+* Admin inquiry management
+* Rich product filtering
+* Homepage banner management
+* SEO manager
+* Audit logs
+* Role-based permissions
+* Media library
+
+## Phase 3
+
+* Blog / knowledge center
+* Dealer/distributor portal
+* Multi-language support
+* Case studies / projects
+* Advanced analytics
+* CRM integration
+* WhatsApp automation
+* Product comparison
+* Certifications module
+
+## Production launch checklist
+
+* Domain and SSL
+* Environment variables configured
+* Database migrations applied
+* Admin account secured
+* Forms tested
+* SEO metadata verified
+* Sitemap submitted
+* Analytics installed
+* Performance tested
+* Broken links checked
+* Mobile QA completed
+* Image optimization verified
+* Backup plan ready
+* Security headers configured
+
+---
+
+# FINAL MASTER PROMPT FOR AI CODING AGENT
+
+Use this prompt to build the full website:
+
+**Master Prompt**
+
+Build a production-ready corporate website for **ARKA CRETE SUPPLEMENTS LLP**, a Hyderabad-based construction chemical manufacturer and supplier. The brand focuses on tile adhesives, grouts, waterproofing compounds, repair mortars, anchoring grouts, block joining mortars, bonding agents, and future epoxy solutions. The site must present a premium industrial/corporate identity, generate lead inquiries, and provide a scalable CMS-backed architecture.
+
+Use the company branding and palette derived from the logo:
+Primary Orange `#F5820A`, Brown `#6B3200`, Deep Accent `#230022`, White `#FFFFFF`, Light Gray `#E5E5E5`. Use a modern industrial visual style with strong white space, bold product imagery, clean typography, and mobile-first responsive layouts.
+
+Build the frontend with:
+
+* Next.js 16 App Router
+* TypeScript
+* Tailwind CSS v4
+* Zustand for UI state
+* TanStack React Query for server data
+* Server Actions or route handlers where appropriate
+* Turso as the database
+* Drizzle ORM for schema and queries
+
+Create these public pages:
+
+* Home
+* About Us
+* Products listing
+* Product category pages
+* Product detail pages
+* Infrastructure
+* Downloads
+* Contact Us
+* Privacy Policy
+* Terms
+
+Create these admin pages:
+
+* Admin dashboard
+* Products management
+* Categories management
+* Pages management
+* Media library
+* Inquiries management
+* SEO manager
+* Users and roles
+* Settings
+* Audit logs
+
+Implement:
+
+* RBAC authentication and authorization
+* Secure admin login
+* Inquiry/contact forms with validation
+* Product catalog with categories, features, applications, packaging, coverage, and downloads
+* SEO-friendly slugs and metadata
+* Structured data for Organization, LocalBusiness, and Product
+* Image optimization and lazy loading
+* SEO sitemap and robots configuration
+* Audit logging for all admin actions
+* File upload handling for product brochures and images
+* Reusable design system components
+* Fully responsive and accessible UI
+
+Database design must include:
+
+* users
+* roles
+* permissions
+* role_permissions
+* categories
+* products
+* product_images
+* product_documents
+* pages
+* inquiries
+* media_assets
+* settings
+* audit_logs
+
+Use soft deletes and audit fields where needed. Add indexes and constraints for email, slugs, foreign keys, and inquiry status.
+
+Public product content should include the brochure-derived product lines such as:
+
+* Tile Grip Classic
+* Tile Grip Premium
+* Tile Fix 720
+* Block Fix
+* Tile Grout 721
+* EP Epoxy Grout
+* Free Grout 50
+* Free Grout 70
+* Polygrout
+* Expacem 225
+* Microcrete
+* Rep 111
+* Arkacoat FX
+* Arkaguard IWPL
+* Arkabond SBR
+
+Add a polished hero section with the brand promise “Your Strength, Our Priority,” plus the alternate brochure line “Innovation at Work. Excellence in Every Structure.” Surface the company’s office and factory contact details on the Contact page, and include strong CTAs throughout the site.
+
+Follow production-quality code practices:
+
+* clean folder structure
+* reusable components
+* strong typing
+* validation with Zod
+* secure environment variable handling
+* error boundaries
+* loading and empty states
+* consistent naming
+* accessible forms
+* no hardcoded data where CMS/data layer should be used
+
+Focus on scalability, maintainability, performance, security, and excellent UX. Do not generate mock placeholder logic where real implementations are feasible. Use clean architecture, separation of concerns, and production-ready patterns.
+
+If you want, I can turn this blueprint into a **complete implementation plan with exact database schema and page wireframes next**.
+
+
+
+sample codes:
+
+
+
+
+// "use client";
+
+// import React, { useState, useEffect } from "react";
+// import Image from "next/image";
+// import Link from "next/link";
+// import { motion, AnimatePresence, Variants } from "framer-motion";
+
+// export default function Hero() {
+//   const [currentSlide, setCurrentSlide] = useState(0);
+
+//   const slides = [
+//     {
+//       title: "Your Strength, Our Priority",
+//       subtitle: "Premium Construction Chemicals",
+//       description:
+//         "Hyderabad-based manufacturer of high-performance polymer-modified tile adhesives, non-shrink grouts, block joining mortar, and waterproofing systems.",
+//       image: "/arka_hero_bg.png",
+//       productImage: "/arka_hero_bg.png", // using hero image as container illustration
+//       productLabel: "Polymer-Modified Tile Adhesive",
+//       ctaText: "Explore Formulations",
+//       ctaLink: "/products",
+//       accent: "#F5820A",
+//     },
+//     {
+//       title: "Innovation at Work",
+//       subtitle: "Future-Proof Structural Integrity",
+//       description:
+//         "AAC block adhesives and thin-bed joining mortars formulated to speed up masonry construction and minimize structural dead load.",
+//       image: "/arka_commercial_bg.png",
+//       productImage: "/arka_commercial_bg.png",
+//       productLabel: "Block Fix — AAC Jointing Mortar",
+//       ctaText: "View Block Fix",
+//       ctaLink: "/products/block-fix",
+//       accent: "#F5820A",
+//     },
+//     {
+//       title: "Excellence in Every Structure",
+//       subtitle: "State-of-the-Art Quality & R&D",
+//       description:
+//         "Operating from our automated plant inside the MSME Green Industrial Park. Every batch is tested for tensile adhesion and compressive strength.",
+//       image: "/arka_interior_bg.png",
+//       productImage: "/arka_interior_bg.png",
+//       productLabel: "Waterproofing System",
+//       ctaText: "Our Infrastructure",
+//       ctaLink: "/infrastructure",
+//       accent: "#F5820A",
+//     },
+//   ];
+
+//   const goToSlide = (idx: number) => {
+//     setCurrentSlide(idx);
+//   };
+
+//   useEffect(() => {
+//     const timer = setInterval(() => {
+//       setCurrentSlide((prev) => (prev + 1) % slides.length);
+//     }, 6000);
+//     return () => clearInterval(timer);
+//   }, [slides.length]);
+
+//   const slide = slides[currentSlide];
+
+//   // Product image: slides in from right, exits to left
+//   const productVariants: Variants = {
+//     enter: { x: 120, opacity: 0, scale: 0.92 },
+//     center: {
+//       x: 0,
+//       opacity: 1,
+//       scale: 1,
+//       transition: { duration: 0.75, ease: [0.22, 1, 0.36, 1] },
+//     },
+//     exit: {
+//       x: -80,
+//       opacity: 0,
+//       scale: 0.95,
+//       transition: { duration: 0.4, ease: "easeIn" },
+//     },
+//   };
+
+//   // Text content: fades up from slight bottom offset
+//   const textVariants: Variants = {
+//     enter: { y: 24, opacity: 0 },
+//     center: {
+//       y: 0,
+//       opacity: 1,
+//       transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.1 },
+//     },
+//     exit: {
+//       y: -16,
+//       opacity: 0,
+//       transition: { duration: 0.3, ease: "easeIn" },
+//     },
+//   };
+
+//   return (
+//     <section className="relative h-[85vh] md:h-[90vh] w-full overflow-hidden bg-brand-deep">
+//       {/* Background image layer */}
+//       <AnimatePresence mode="sync">
+//         <motion.div
+//           key={`bg-${currentSlide}`}
+//           initial={{ opacity: 0 }}
+//           animate={{ opacity: 1 }}
+//           exit={{ opacity: 0 }}
+//           transition={{ duration: 1 }}
+//           className="absolute inset-0 z-0"
+//         >
+//           <Image
+//             src={slide.image}
+//             alt={slide.title}
+//             fill
+//             priority={currentSlide === 0}
+//             className="object-cover opacity-20 select-none scale-105"
+//           />
+//           {/* Stronger left-side gradient so text stays readable */}
+//           <div className="absolute inset-0 bg-gradient-to-r from-brand-deep via-brand-deep/80 to-brand-deep/30" />
+//           <div className="absolute inset-0 bg-gradient-to-t from-brand-deep/70 via-transparent to-transparent" />
+//         </motion.div>
+//       </AnimatePresence>
+
+//       {/* Main two-column content */}
+//       <div className="relative z-10 h-full max-w-7xl mx-auto px-6 md:px-12 flex items-center">
+//         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 w-full items-center">
+
+//           {/* LEFT — Text */}
+//           <AnimatePresence mode="wait">
+//             <motion.div
+//               key={`text-${currentSlide}`}
+//               variants={textVariants}
+//               initial="enter"
+//               animate="center"
+//               exit="exit"
+//               className="space-y-5 text-left"
+//             >
+//               <span className="inline-block rounded-full bg-brand-orange/15 border border-brand-orange/30 px-4 py-1.5 text-xs font-extrabold uppercase tracking-widest text-brand-orange">
+//                 {slide.subtitle}
+//               </span>
+
+//               <h1 className="text-4xl sm:text-5xl xl:text-6xl font-black text-white tracking-tight uppercase leading-tight">
+//                 {slide.title}
+//               </h1>
+
+//               <p className="text-stone-300 text-sm sm:text-base max-w-lg leading-relaxed">
+//                 {slide.description}
+//               </p>
+
+//               <div className="pt-2 flex flex-col sm:flex-row gap-4">
+//                 <Link
+//                   href={slide.ctaLink}
+//                   className="inline-flex h-12 items-center justify-center rounded-lg bg-brand-orange px-8 text-xs font-bold uppercase tracking-wider text-white transition-all hover:bg-brand-orange/90 active:scale-[0.98] shadow-md shadow-brand-orange/20"
+//                 >
+//                   {slide.ctaText}
+//                 </Link>
+//                 <Link
+//                   href="/contact"
+//                   className="inline-flex h-12 items-center justify-center rounded-lg border border-stone-500 bg-transparent px-8 text-xs font-bold uppercase tracking-wider text-stone-200 transition-all hover:bg-white/10"
+//                 >
+//                   Request Sample
+//                 </Link>
+//               </div>
+
+//               {/* Slide progress — simple numbered indicator */}
+//               <div className="pt-4 flex items-center gap-3">
+//                 {slides.map((_, idx) => (
+//                   <button
+//                     key={idx}
+//                     onClick={() => goToSlide(idx)}
+//                     className={`h-1 rounded-full transition-all duration-500 ${
+//                       currentSlide === idx
+//                         ? "w-10 bg-brand-orange"
+//                         : "w-4 bg-white/30 hover:bg-white/60"
+//                     }`}
+//                     aria-label={`Go to slide ${idx + 1}`}
+//                   />
+//                 ))}
+//                 <span className="ml-2 text-xs text-stone-500 font-mono tabular-nums select-none">
+//                   {String(currentSlide + 1).padStart(2, "0")} /{" "}
+//                   {String(slides.length).padStart(2, "0")}
+//                 </span>
+//               </div>
+//             </motion.div>
+//           </AnimatePresence>
+
+//           {/* RIGHT — Product image with Framer Motion */}
+//           <div className="relative hidden md:flex items-center justify-center">
+//             {/* Decorative glow ring behind product */}
+//             <div
+//               className="absolute w-72 h-72 rounded-full blur-3xl opacity-20"
+//               style={{ background: `radial-gradient(circle, ${slide.accent}, transparent 70%)` }}
+//             />
+
+//             <AnimatePresence mode="wait">
+//               <motion.div
+//                 key={`product-${currentSlide}`}
+//                 variants={productVariants}
+//                 initial="enter"
+//                 animate="center"
+//                 exit="exit"
+//                 className="relative w-full max-w-sm xl:max-w-md aspect-square"
+//               >
+//                 {/* Outer ring accent */}
+//                 <motion.div
+//                   initial={{ opacity: 0, scale: 0.8 }}
+//                   animate={{ opacity: 1, scale: 1 }}
+//                   transition={{ delay: 0.35, duration: 0.5 }}
+//                   className="absolute -inset-4 rounded-2xl border border-brand-orange/15"
+//                 />
+
+//                 {/* Product image card */}
+//                 <div className="relative w-full h-full rounded-2xl overflow-hidden bg-white/5 backdrop-blur-sm border border-white/10 shadow-2xl">
+//                   <Image
+//                     src={slide.productImage}
+//                     alt={slide.productLabel}
+//                     fill
+//                     className="object-cover opacity-80"
+//                     priority={currentSlide === 0}
+//                   />
+//                 </div>
+
+//                 {/* Product label badge — bottom-left */}
+//                 <motion.div
+//                   initial={{ opacity: 0, y: 12 }}
+//                   animate={{ opacity: 1, y: 0 }}
+//                   transition={{ delay: 0.55, duration: 0.45 }}
+//                   className="absolute -bottom-4 left-4 right-4 mx-auto bg-brand-deep/90 backdrop-blur border border-white/10 rounded-xl px-4 py-2.5 flex items-center gap-3"
+//                 >
+//                   <span className="h-2 w-2 rounded-full bg-brand-orange flex-shrink-0 animate-pulse" />
+//                   <span className="text-xs font-semibold text-stone-200 tracking-wide truncate">
+//                     {slide.productLabel}
+//                   </span>
+//                 </motion.div>
+//               </motion.div>
+//             </AnimatePresence>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+
+
+
+
+// "use client";
+
+// import React, { useState, useEffect } from "react";
+// import Image from "next/image";
+// import Link from "next/link";
+// import { motion, AnimatePresence } from "framer-motion";
+
+// const slides = [
+//   {
+//     index: "01",
+//     category: "Tile Adhesives",
+//     headlineTop: "Your Strength,",
+//     headlineBottom: "Our Priority",
+//     highlightWord: "Priority",
+//     description:
+//       "Polymer-modified adhesives formulated for tensile bond strengths exceeding IS 15477 standards — tested every batch, every time.",
+//     stat: { value: "3.5 MPa", label: "Min. Tensile Bond" },
+//     image: "/arka_hero_bg.png",
+//     productImage: "/product_tile_adhesive.png",
+//     productLabel: "SuperFix Pro — C2TE Grade",
+//   },
+//   {
+//     index: "02",
+//     category: "Block Joining Mortars",
+//     headlineTop: "Innovation",
+//     headlineBottom: "At Work",
+//     highlightWord: "Work",
+//     description:
+//       "Thin-bed AAC jointing mortar that cuts masonry time by 40% and reduces structural dead load without sacrificing joint integrity.",
+//     stat: { value: "≤3mm", label: "Joint Thickness" },
+//     image: "/arka_commercial_bg.png",
+//     productImage: "/product_block_fix.png",
+//     productLabel: "Block Fix — AAC Grade",
+//   },
+//   {
+//     index: "03",
+//     category: "Waterproofing",
+//     headlineTop: "Excellence in",
+//     headlineBottom: "Every Structure",
+//     highlightWord: "Structure",
+//     description:
+//       "Flexible cementitious coatings and crystalline systems built for podiums, bathrooms, retaining walls, and terraces.",
+//     stat: { value: "MSME", label: "Green Industrial Park" },
+//     image: "/arka_interior_bg.png",
+//     productImage: "/product_waterproofing.png",
+//     productLabel: "AquaShield — Type B Coating",
+//   },
+// ];
+
+// const productVariants = {
+//   enter: { x: 100, opacity: 0, scale: 0.94 },
+//   center: {
+//     x: 0, opacity: 1, scale: 1,
+//     transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
+//   },
+//   exit: {
+//     x: -60, opacity: 0, scale: 0.96,
+//     transition: { duration: 0.35, ease: "easeIn" },
+//   },
+// };
+
+// const textVariants = {
+//   enter: { opacity: 0, y: 20 },
+//   center: {
+//     opacity: 1, y: 0,
+//     transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] },
+//   },
+//   exit: {
+//     opacity: 0, y: -12,
+//     transition: { duration: 0.25, ease: "easeIn" },
+//   },
+// };
+
+// export default function Hero() {
+//   const [current, setCurrent] = useState(0);
+
+//   useEffect(() => {
+//     const t = setInterval(() => setCurrent((p) => (p + 1) % slides.length), 6000);
+//     return () => clearInterval(t);
+//   }, []);
+
+//   const slide = slides[current];
+//   const restOfBottom = slide.headlineBottom.replace(slide.highlightWord, "").trim();
+
+//   return (
+//     <section className="relative h-screen max-h-[820px] min-h-[600px] w-full overflow-hidden bg-stone-50">
+
+//       {/* Right-side background image — fills the product column area */}
+//       <AnimatePresence mode="sync">
+//         <motion.div
+//           key={`bg-${current}`}
+//           initial={{ opacity: 0 }}
+//           animate={{ opacity: 1 }}
+//           exit={{ opacity: 0 }}
+//           transition={{ duration: 1.2 }}
+//           className="absolute inset-y-0 right-0 w-[52%] z-0"
+//         >
+//           <Image
+//             src={slide.image}
+//             alt=""
+//             fill
+//             priority={current === 0}
+//             className="object-cover select-none"
+//             style={{ opacity: 0.12 }}
+//           />
+//           {/* Fade left edge into stone-50 */}
+//           <div className="absolute inset-0 bg-gradient-to-r from-stone-50 via-stone-50/30 to-transparent" />
+//         </motion.div>
+//       </AnimatePresence>
+
+//       {/* Subtle dot pattern on left side */}
+//       <div
+//         className="absolute inset-y-0 left-0 w-[55%] z-0 pointer-events-none"
+//         style={{
+//           backgroundImage: "radial-gradient(circle, #d6d3cd 1px, transparent 1px)",
+//           backgroundSize: "28px 28px",
+//           opacity: 0.5,
+//         }}
+//       />
+
+//       {/* Vertical slide rail — far left */}
+//       <div className="absolute left-5 top-1/2 -translate-y-1/2 z-20 hidden lg:flex flex-col items-center gap-0">
+//         {slides.map((s, idx) => (
+//           <button
+//             key={idx}
+//             onClick={() => setCurrent(idx)}
+//             className="group flex items-center gap-2 py-3"
+//             aria-label={`Go to slide ${s.index}`}
+//           >
+//             <div
+//               className={`h-px transition-all duration-500 ${current === idx ? "w-8 bg-[#E8651A]" : "w-4 bg-stone-300 group-hover:bg-stone-400"
+//                 }`}
+//             />
+//             <span
+//               className={`font-mono text-[10px] transition-all duration-300 ${current === idx ? "text-[#E8651A]" : "text-stone-400 group-hover:text-stone-600"
+//                 }`}
+//             >
+//               {s.index}
+//             </span>
+//           </button>
+//         ))}
+//       </div>
+
+//       {/* Main grid */}
+//       <div className="relative z-10 h-full max-w-7xl mx-auto px-10 md:px-16 lg:px-24 flex items-center">
+//         <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-12 lg:gap-16 w-full items-center">
+
+//           {/* LEFT — content */}
+//           <AnimatePresence mode="wait">
+//             <motion.div
+//               key={`text-${current}`}
+//               variants={textVariants}
+//               initial="enter"
+//               animate="center"
+//               exit="exit"
+//               className="space-y-7 max-w-xl"
+//             >
+//               {/* Spec-sheet category label */}
+//               <div className="flex items-center gap-4">
+//                 <span className="font-mono text-[11px] text-[#E8651A] tracking-widest">
+//                   {slide.index} / 03
+//                 </span>
+//                 <div className="h-px w-10 bg-[#E8651A]/40" />
+//                 <span className="text-[11px] uppercase tracking-[0.2em] text-stone-400 font-medium">
+//                   {slide.category}
+//                 </span>
+//               </div>
+
+//               {/* Headline — dark ink on light bg, punchy */}
+//               <div>
+//                 <h1 className="text-5xl sm:text-6xl font-black text-stone-900 leading-[1.05]">
+//                   {slide.headlineTop}
+//                 </h1>
+//                 <h1 className="text-5xl sm:text-6xl font-black leading-[1.05] mt-1">
+//                   {restOfBottom && (
+//                     <span className="text-stone-900">{restOfBottom} </span>
+//                   )}
+//                   <span className="relative inline-block text-stone-900">
+//                     {slide.highlightWord}
+//                     <span className="absolute -bottom-1 left-0 right-0 h-[5px] bg-[#E8651A] rounded-sm" />
+//                   </span>
+//                 </h1>
+//               </div>
+
+//               {/* Description — left-ruled callout */}
+//               <p className="border-l-2 border-[#E8651A]/50 pl-4 text-stone-500 text-sm leading-relaxed">
+//                 {slide.description}
+//               </p>
+
+//               {/* Spec stat */}
+//               <div className="flex items-center gap-6">
+//                 <div>
+//                   <div className="text-3xl font-black text-stone-900 font-mono tracking-tight">
+//                     {slide.stat.value}
+//                   </div>
+//                   <div className="text-[10px] uppercase tracking-widest text-stone-400 mt-0.5">
+//                     {slide.stat.label}
+//                   </div>
+//                 </div>
+//                 {/* Thin divider */}
+//                 <div className="w-px h-10 bg-stone-200" />
+//                 {/* Trust badge — inline, no card */}
+//                 <div className="flex items-center gap-2">
+//                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="text-[#E8651A] shrink-0">
+//                     <path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1-3-2.9 4.2-.7L8 1z" fill="currentColor" />
+//                   </svg>
+//                   <span className="text-[11px] text-stone-500 leading-tight">
+//                     IS 15477<br />Certified
+//                   </span>
+//                 </div>
+//               </div>
+
+//               {/* CTA */}
+//               <div className="flex items-center gap-6 pt-1">
+//                 <Link
+//                   href="/products"
+//                   className="inline-flex h-11 items-center gap-2 bg-[#E8651A] px-7 text-[11px] font-bold uppercase tracking-widest text-white rounded hover:bg-[#d45a15] transition-colors shadow-sm shadow-[#E8651A]/20"
+//                 >
+//                   View Product
+//                   <svg width="14" height="14" viewBox="0 0 16 16" fill="none" className="shrink-0">
+//                     <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+//                   </svg>
+//                 </Link>
+//                 <Link
+//                   href="/contact"
+//                   className="text-[11px] uppercase tracking-widest text-stone-400 hover:text-stone-800 transition-colors border-b border-stone-300 hover:border-stone-800 pb-0.5"
+//                 >
+//                   Request Sample
+//                 </Link>
+//               </div>
+//             </motion.div>
+//           </AnimatePresence>
+
+//           {/* RIGHT — product image */}
+//           <div className="relative hidden md:flex items-center justify-center w-[340px] lg:w-[400px] xl:w-[440px] shrink-0">
+
+//             <AnimatePresence mode="wait">
+//               <motion.div
+//                 key={`product-${current}`}
+//                 variants={productVariants}
+//                 initial="enter"
+//                 animate="center"
+//                 exit="exit"
+//                 className="relative w-full aspect-square"
+//               >
+//                 {/* Corner brackets */}
+//                 <div className="absolute top-0 left-0 w-6 h-6 pointer-events-none">
+//                   <div className="absolute top-0 left-0 w-full h-[2px] bg-[#E8651A]/50" />
+//                   <div className="absolute top-0 left-0 w-[2px] h-full bg-[#E8651A]/50" />
+//                 </div>
+//                 <div className="absolute top-0 right-0 w-6 h-6 pointer-events-none">
+//                   <div className="absolute top-0 right-0 w-full h-[2px] bg-[#E8651A]/50" />
+//                   <div className="absolute top-0 right-0 w-[2px] h-full bg-[#E8651A]/50" />
+//                 </div>
+//                 <div className="absolute bottom-0 left-0 w-6 h-6 pointer-events-none">
+//                   <div className="absolute bottom-0 left-0 w-full h-[2px] bg-[#E8651A]/50" />
+//                   <div className="absolute bottom-0 left-0 w-[2px] h-full bg-[#E8651A]/50" />
+//                 </div>
+//                 <div className="absolute bottom-0 right-0 w-6 h-6 pointer-events-none">
+//                   <div className="absolute bottom-0 right-0 w-full h-[2px] bg-[#E8651A]/50" />
+//                   <div className="absolute bottom-0 right-0 w-[2px] h-full bg-[#E8651A]/50" />
+//                 </div>
+
+//                 {/* Soft warm circle behind product */}
+//                 <div className="absolute inset-8 rounded-full bg-[#E8651A]/06" />
+
+//                 <div className="relative w-full h-full">
+//                   <Image
+//                     src={slide.productImage}
+//                     alt={slide.productLabel}
+//                     fill
+//                     className="object-contain p-10 drop-shadow-md"
+//                     priority={current === 0}
+//                   />
+//                 </div>
+
+//                 {/* Product label tag */}
+//                 <motion.div
+//                   initial={{ opacity: 0 }}
+//                   animate={{ opacity: 1 }}
+//                   transition={{ delay: 0.5, duration: 0.4 }}
+//                   className="absolute -bottom-5 left-0 right-0 flex justify-center"
+//                 >
+//                   <div className="bg-[#E8651A] px-4 py-1.5">
+//                     <span className="text-[10px] font-bold uppercase tracking-widest text-white">
+//                       {slide.productLabel}
+//                     </span>
+//                   </div>
+//                 </motion.div>
+//               </motion.div>
+//             </AnimatePresence>
+//           </div>
+
+//         </div>
+//       </div>
+
+//       {/* Bottom progress bar */}
+//       <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-stone-200 z-20">
+//         <motion.div
+//           className="h-full bg-[#E8651A]"
+//           initial={{ width: "0%" }}
+//           animate={{ width: "100%" }}
+//           key={current}
+//           transition={{ duration: 6, ease: "linear" }}
+//         />
+//       </div>
+//     </section>
+//   );
+// }
+
+
+
+
+
+
+
+
+
+// "use client";
+
+// import React, { useState, useEffect } from "react";
+// import Image from "next/image";
+// import Link from "next/link";
+// import { motion, AnimatePresence } from "framer-motion";
+
+// const slides = [
+//   {
+//     index: "01",
+//     category: "Tile Adhesives",
+//     headlineTop: "Your Strength,",
+//     headlineBottom: "Our Priority",
+//     highlightWord: "Priority",
+//     description:
+//       "Polymer-modified adhesives formulated for tensile bond strengths exceeding IS 15477 standards — tested every batch, every time.",
+//     stats: [
+//       { value: "3.5 MPa", label: "Tensile Bond" },
+//       { value: "IS 15477", label: "Certified" },
+//       { value: "C2TE", label: "Grade" },
+//     ],
+//     image: "/arka_hero_bg.png",
+//     productImage: "/product_tile_adhesive.png",
+//     productLabel: "SuperFix Pro — C2TE Grade",
+//   },
+//   {
+//     index: "02",
+//     category: "Block Joining Mortars",
+//     headlineTop: "Innovation",
+//     headlineBottom: "At Work",
+//     highlightWord: "Work",
+//     description:
+//       "Thin-bed AAC jointing mortar that cuts masonry time by 40% and reduces structural dead load without sacrificing joint integrity.",
+//     stats: [
+//       { value: "≤3mm", label: "Joint Thickness" },
+//       { value: "40%", label: "Time Saved" },
+//       { value: "AAC", label: "Compatible" },
+//     ],
+//     image: "/arka_commercial_bg.png",
+//     productImage: "/product_block_fix.png",
+//     productLabel: "Block Fix — AAC Grade",
+//   },
+//   {
+//     index: "03",
+//     category: "Waterproofing",
+//     headlineTop: "Excellence in",
+//     headlineBottom: "Every Structure",
+//     highlightWord: "Structure",
+//     description:
+//       "Flexible cementitious coatings and crystalline systems built for podiums, bathrooms, retaining walls, and terraces.",
+//     stats: [
+//       { value: "Type B", label: "Classification" },
+//       { value: "MSME", label: "Certified Plant" },
+//       { value: "10+ Yr", label: "Track Record" },
+//     ],
+//     image: "/arka_interior_bg.png",
+//     productImage: "/product_waterproofing.png",
+//     productLabel: "AquaShield — Type B Coating",
+//   },
+// ];
+
+// const textVariants = {
+//   enter: { opacity: 0, y: 22 },
+//   center: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } },
+//   exit: { opacity: 0, y: -14, transition: { duration: 0.25, ease: "easeIn" } },
+// };
+
+// const productVariants = {
+//   enter: { x: 80, opacity: 0, scale: 0.93 },
+//   center: { x: 0, opacity: 1, scale: 1, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } },
+//   exit: { x: -50, opacity: 0, scale: 0.96, transition: { duration: 0.3, ease: "easeIn" } },
+// };
+
+// export default function Hero() {
+//   const [current, setCurrent] = useState(0);
+
+//   useEffect(() => {
+//     const t = setInterval(() => setCurrent((p) => (p + 1) % slides.length), 6000);
+//     return () => clearInterval(t);
+//   }, []);
+
+//   const slide = slides[current];
+//   const restOfBottom = slide.headlineBottom.replace(slide.highlightWord, "").trim();
+
+//   return (
+//     <section className="relative w-full overflow-hidden" style={{ minHeight: "min(90vh, 820px)", maxHeight: "820px" }}>
+
+//       {/* ── SPLIT LAYOUT ───────────────────────────────── */}
+//       <div className="flex h-full" style={{ minHeight: "inherit", maxHeight: "inherit" }}>
+
+//         {/* LEFT — warm white */}
+//         <div className="relative flex-1 bg-[#FAFAF8] flex flex-col justify-center px-12 lg:px-16 xl:px-20 py-12 overflow-hidden">
+
+//           {/* Subtle dot texture */}
+//           <div
+//             className="absolute inset-0 pointer-events-none"
+//             style={{
+//               backgroundImage: "radial-gradient(circle, #D6D3CD 1px, transparent 1px)",
+//               backgroundSize: "28px 28px",
+//               opacity: 0.45,
+//             }}
+//           />
+
+//           {/* Vertical slide nav — far left */}
+//           <div className="absolute left-4 top-1/2 -translate-y-1/2 z-10 hidden lg:flex flex-col gap-0">
+//             {slides.map((s, idx) => (
+//               <button
+//                 key={idx}
+//                 onClick={() => setCurrent(idx)}
+//                 className="group flex items-center gap-2 py-3"
+//                 aria-label={`Slide ${s.index}`}
+//               >
+//                 <div className={`h-px transition-all duration-500 ${current === idx ? "w-6 bg-[#E8651A]" : "w-3 bg-stone-300 group-hover:bg-stone-400"}`} />
+//                 <span className={`font-mono text-[9px] transition-colors duration-300 ${current === idx ? "text-[#E8651A]" : "text-stone-400 group-hover:text-stone-500"}`}>
+//                   {s.index}
+//                 </span>
+//               </button>
+//             ))}
+//           </div>
+
+//           <AnimatePresence mode="wait">
+//             <motion.div
+//               key={`text-${current}`}
+//               variants={textVariants}
+//               initial="enter"
+//               animate="center"
+//               exit="exit"
+//               className="relative z-10 space-y-6 max-w-lg"
+//             >
+//               {/* Eyebrow */}
+//               <div className="flex items-center gap-3">
+//                 <div className="h-[2px] w-7 bg-[#E8651A]" />
+//                 <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#E8651A]">
+//                   {slide.category}
+//                 </span>
+//               </div>
+
+//               {/* Headline */}
+//               <div>
+//                 <h1 className="text-5xl xl:text-[56px] font-black text-stone-900 leading-[1.03] tracking-tight">
+//                   {slide.headlineTop}
+//                 </h1>
+//                 <h1 className="text-5xl xl:text-[56px] font-black leading-[1.03] tracking-tight mt-0.5">
+//                   {restOfBottom && <span className="text-stone-900">{restOfBottom} </span>}
+//                   <span className="relative inline-block text-stone-900">
+//                     {slide.highlightWord}
+//                     <span className="absolute -bottom-0.5 left-0 right-0 h-[5px] bg-[#E8651A] rounded-sm" />
+//                   </span>
+//                 </h1>
+//               </div>
+
+//               {/* Description */}
+//               <p className="text-[13.5px] leading-relaxed text-stone-500 max-w-md">
+//                 {slide.description}
+//               </p>
+
+//               {/* Stats row — white card, three columns */}
+//               <div className="flex rounded-lg overflow-hidden border border-stone-200 bg-white">
+//                 {slide.stats.map((stat, i) => (
+//                   <div
+//                     key={i}
+//                     className={`flex-1 px-4 py-3 ${i > 0 ? "border-l border-stone-200" : ""}`}
+//                   >
+//                     <div className="text-[18px] font-black text-stone-900 tracking-tight font-mono">
+//                       {stat.value}
+//                     </div>
+//                     <div className="text-[10px] uppercase tracking-widest text-stone-400 mt-0.5">
+//                       {stat.label}
+//                     </div>
+//                   </div>
+//                 ))}
+//               </div>
+
+//               {/* CTAs */}
+//               <div className="flex items-center gap-5 pt-1">
+//                 <Link
+//                   href="/products"
+//                   className="inline-flex h-11 items-center gap-2 bg-[#E8651A] px-6 text-[11px] font-bold uppercase tracking-widest text-white rounded-md hover:bg-[#d45a15] transition-colors"
+//                 >
+//                   View Product
+//                   <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
+//                     <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+//                   </svg>
+//                 </Link>
+//                 <Link
+//                   href="/contact"
+//                   className="text-[11px] uppercase tracking-widest text-stone-400 hover:text-stone-800 transition-colors border-b border-stone-300 hover:border-stone-700 pb-px"
+//                 >
+//                   Request Sample
+//                 </Link>
+//               </div>
+//             </motion.div>
+//           </AnimatePresence>
+//         </div>
+
+//         {/* RIGHT — dark panel */}
+//         <div className="relative hidden md:flex w-[46%] xl:w-[44%] shrink-0 items-center justify-center bg-[#1C1917] overflow-hidden">
+
+//           {/* Background image at very low opacity */}
+//           <AnimatePresence mode="sync">
+//             <motion.div
+//               key={`bg-${current}`}
+//               initial={{ opacity: 0 }}
+//               animate={{ opacity: 1 }}
+//               exit={{ opacity: 0 }}
+//               transition={{ duration: 1.2 }}
+//               className="absolute inset-0"
+//             >
+//               <Image
+//                 src={slide.image}
+//                 alt=""
+//                 fill
+//                 priority={current === 0}
+//                 className="object-cover select-none"
+//                 style={{ opacity: 0.1 }}
+//               />
+//             </motion.div>
+//           </AnimatePresence>
+
+//           {/* Orange glow */}
+//           <div
+//             className="absolute inset-0 pointer-events-none"
+//             style={{
+//               background: "radial-gradient(ellipse at 60% 40%, rgba(232,101,26,0.18) 0%, transparent 65%)",
+//             }}
+//           />
+
+//           {/* Product */}
+//           <div className="relative z-10 flex flex-col items-center">
+//             <div className="font-mono text-[9px] text-white/25 tracking-[0.14em] uppercase mb-4">
+//               Product / {slide.index}
+//             </div>
+
+//             <AnimatePresence mode="wait">
+//               <motion.div
+//                 key={`product-${current}`}
+//                 variants={productVariants}
+//                 initial="enter"
+//                 animate="center"
+//                 exit="exit"
+//                 className="flex flex-col items-center"
+//               >
+//                 {/* Frame */}
+//                 <div
+//                   className="relative"
+//                   style={{ width: 260, height: 260 }}
+//                 >
+//                   {/* Corner brackets */}
+//                   {["top-0 left-0", "top-0 right-0", "bottom-0 left-0", "bottom-0 right-0"].map((pos, i) => (
+//                     <div key={i} className={`absolute ${pos} w-5 h-5 pointer-events-none`}>
+//                       <div className="absolute" style={{
+//                         background: "#E8651A",
+//                         width: "100%", height: "2px",
+//                         top: i < 2 ? 0 : "auto",
+//                         bottom: i >= 2 ? 0 : "auto",
+//                         left: i % 2 === 0 ? 0 : "auto",
+//                         right: i % 2 === 1 ? 0 : "auto",
+//                         opacity: 0.7,
+//                       }} />
+//                       <div className="absolute" style={{
+//                         background: "#E8651A",
+//                         width: "2px", height: "100%",
+//                         top: i < 2 ? 0 : "auto",
+//                         bottom: i >= 2 ? 0 : "auto",
+//                         left: i % 2 === 0 ? 0 : "auto",
+//                         right: i % 2 === 1 ? 0 : "auto",
+//                         opacity: 0.7,
+//                       }} />
+//                     </div>
+//                   ))}
+
+//                   {/* Subtle border */}
+//                   <div className="absolute inset-0 border border-white/5 rounded-sm" />
+
+//                   <Image
+//                     src={slide.productImage}
+//                     alt={slide.productLabel}
+//                     fill
+//                     className="object-contain p-10"
+//                     priority={current === 0}
+//                   />
+//                 </div>
+
+//                 {/* Label */}
+//                 <motion.div
+//                   initial={{ opacity: 0, y: 8 }}
+//                   animate={{ opacity: 1, y: 0 }}
+//                   transition={{ delay: 0.48, duration: 0.38 }}
+//                   className="mt-5 bg-[#E8651A] px-5 py-2"
+//                 >
+//                   <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-white">
+//                     {slide.productLabel}
+//                   </span>
+//                 </motion.div>
+
+//                 {/* Slide dots */}
+//                 <div className="flex items-center gap-2 mt-6">
+//                   {slides.map((_, idx) => (
+//                     <button
+//                       key={idx}
+//                       onClick={() => setCurrent(idx)}
+//                       className={`h-[2px] rounded-none transition-all duration-500 ${current === idx ? "w-7 bg-[#E8651A]" : "w-3 bg-white/20 hover:bg-white/40"}`}
+//                       aria-label={`Slide ${idx + 1}`}
+//                     />
+//                   ))}
+//                 </div>
+//               </motion.div>
+//             </AnimatePresence>
+//           </div>
+
+//           {/* Progress bar — bottom of right panel */}
+//           <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-white/10">
+//             <motion.div
+//               className="h-full bg-[#E8651A]"
+//               initial={{ width: "0%" }}
+//               animate={{ width: "100%" }}
+//               key={current}
+//               transition={{ duration: 6, ease: "linear" }}
+//             />
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* ── TRUST STRIP ────────────────────────────────── */}
+//       <div className="hidden md:flex items-center gap-0 bg-white border-t border-stone-200 px-16 xl:px-20 h-10 absolute bottom-0 left-0 right-[46%] xl:right-[44%] z-20">
+//         {[
+//           "IS 15477 Certified",
+//           "MSME Green Park",
+//           "Hyderabad, India",
+//           "Free Sample Available",
+//         ].map((item, i) => (
+//           <React.Fragment key={i}>
+//             {i > 0 && <div className="w-px h-3.5 bg-stone-200 mx-5 shrink-0" />}
+//             <span className="text-[10px] font-semibold uppercase tracking-widest text-stone-400 whitespace-nowrap">
+//               {item}
+//             </span>
+//           </React.Fragment>
+//         ))}
+//       </div>
+
+//     </section>
+//   );
+// }

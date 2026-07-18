@@ -203,7 +203,7 @@ export default function Hero() {
             {/* Trust strip — inside a subtle card */}
             <div className="flex items-center gap-2.5 px-4 py-3 rounded-xl border border-stone-200 bg-stone-50">
               {[
-                { icon: true, label: "IS Certified" },
+                { icon: true, label: "ISO Certified" },
                 { label: "MSME Park" },
                 { label: "Hyderabad" },
                 { label: "Since 2012" },

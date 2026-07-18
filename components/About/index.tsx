@@ -97,7 +97,7 @@ export default function About() {
               <ShieldAlert className="w-8 h-8 text-brand-orange mx-auto" />
               <h4 className="text-sm font-bold text-brand-deep">Certified Standards</h4>
               <p className="text-stone-500 text-xs leading-relaxed">
-                Adhesives and grouts are formulated to conform to BIS standards, offering optimal open-times and zero-crack drying indices.
+                Adhesives and grouts are formulated to conform to ISI standards, offering optimal open-times and zero-crack drying indices.
               </p>
             </div>
 
